@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>OmniMMI</title>
+<meta name="description" content="OmniMMI: A Comprehensive Multi-modal Interaction Benchmark in Streaming Video Contexts">
+
+<!-- Open Graph -->
+
+
+<!-- Bulma & MDB -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.24/dist/css/bulma-carousel.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-slider@2.0.5/dist/css/bulma-slider.min.css">
+
+<!-- Fonts & Icons -->
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous">
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css"
+    crossorigin="anonymous">
+<link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Lora|Google+Sans|Material+Icons">
+
+<!-- Code Syntax Highlighting -->
+<!-- <link rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/.css" /> -->
+
+<!-- Styles -->
+<link rel="shortcut icon" href="/assets/img/favicon.ico">
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<link rel="canonical" href="/">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-solarizedlight.min.css"/>
+
+
+<!-- Theming-->
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD4J271NBT"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag () { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-XD4J271NBT');
+</script>
+
+
+
+
+
+    
+<!-- MathJax -->
+<script type="text/javascript">
+    window.MathJax = {
+        tex: {
+            tags: 'ams'
+        }
+    };
+</script>
+<script defer type="text/javascript" id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+
+</head>
+
+<body>
+    <!-- Header -->
+
+    
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    <div class="navbar-menu">
+        <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+            <a class="navbar-item" href="http://0.0.0.0:4000">
+                <span class="icon">
+                    <i class="fas fa-home"></i>
+                </span>
+            </a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    More Research
+                </a>
+                <div class="navbar-dropdown">
+
+                    <a class="navbar-item" href="https://videollamb.github.io/">
+                        VideoLLaMB
+                    </a>  
+                  
+                    <a class="navbar-item" href="https://bigai-nlco.github.io/ExoViP/">
+                        ExoViP
+                    </a>
+                    
+                    <a class="navbar-item" href="https://videohallucer.github.io/">
+                        VideoHallucer
+                    </a>
+                    
+                    <a class="navbar-item" href="https://github.com/bigai-nlco/VideoTGB">
+                        VideoTGB
+                    </a>
+                    
+                    <a class="navbar-item" href="https://vstar-benchmark.github.io/">
+                        VSTAR
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+
+    <!-- Content -->
+
+    <div class="container is-fullhd mt-5">
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container is-max-desktop">
+                    <div class="columns is-centered">
+                        <div class="column has-text-centered">
+                            <div style="display: flex;padding-bottom: 20px;">
+                                <!-- <img src="/assets/img/logo.png"
+                                    width="150px" style="vertical-align: middle;"> -->
+                                <h1 class="title is-2 publication-title"><span style="display: block;">OmniMMI: A Comprehensive Multi-modal Interaction Benchmark in Streaming Video Contexts</span></h1>
+                            </div>
+                            
+                            
+
+                            <div class="is-size-5 publication-authors">
+                                
+                                <span class="author-block"><a href="https://patrick-tssn.github.io/">Yuxuan Wang</a><sup>1</sup></span>, 
+                                
+                                <span class="author-block"><a href="https://yellow-binary-tree.github.io/">Yueqian Wang</a><sup>2</sup></span>, 
+                                
+                                <span class="author-block"><a>Bo Chen</a><sup>3</sup></span>, 
+
+                                <span class="author-block"><a href="https://wutong4012.github.io/">Tong Wu</a><sup>1</sup></span>, 
+
+                                <span class="author-block"><a href="https://www.icst.pku.edu.cn/zhaodongyan/en/">Dongyan Zhao</a><sup>2</sup></span>, 
+                                
+                                <span class="author-block"><a href="https://zilongzheng.github.io">Zilong Zheng</a><sup>1, <i class="fa fa-envelope"></i></sup></span>
+                                
+                            </div>
+                            
+
+                            
+                            <div class="is-size-5 publication-authors">
+                                
+                                <span class="author-block"><sup>1</sup>BIGAI</span>, 
+                                
+                                <span class="author-block"><sup>2</sup>PKU</span>, 
+                                
+                                <span class="author-block"><sup>3</sup>SJTU</span>
+                                
+                            </div>
+                            
+
+                            
+
+                            <div class="column has-text-centered">
+                                <div class="publication-links">
+                                    
+                                    
+                                    <span class="link-block">
+                                        <a href="https://arxiv.org/abs/xxx.xxxx"
+                                            class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon">
+                                                <i class="ai ai-arxiv"></i>
+                                            </span>
+                                            <span>arXiv</span>
+                                        </a>
+                                    </span>
+                                    
+                                    
+                                    
+                                    <!-- Code Link. -->
+                                    <span class="link-block">
+                                        <a href="https://github.com/bigai-nlco/OmniMMI"
+                                            class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon">
+                                                <i class="fab fa-github"></i>
+                                            </span>
+                                            <span>Code (OmniMMI)</span>
+                                        </a>
+                                    </span>
+
+                                    <!-- Code Link. -->
+                                    <span class="link-block">
+                                      <a href="https://github.com/bigai-nlco/OmniMMI"
+                                          class="external-link button is-normal is-rounded is-dark">
+                                          <span class="icon">
+                                              <i class="fab fa-github"></i>
+                                          </span>
+                                          <span>Code (M4)</span>
+                                      </a>
+                                  </span>
+                                    
+                                    
+                                    <span class="link-block">
+                                      <a href="https://huggingface.co/ColorfulAI/xxx"
+                                          class="external-link button is-normal is-rounded is-dark">
+                                          <span class="icon">
+                                              &#129303;
+                                          </span>
+                                          <span>OmniMMI</span>
+                                      </a>
+                                  </span>
+                                    
+                                    
+                                    <span class="link-block">
+                                        <a href="https://huggingface.co/ColorfulAI/xxx"
+                                            class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon">
+                                                &#129303;
+                                            </span>
+                                            <span>M4-7B</span>
+                                        </a>
+                                    </span>
+
+                                    <span class="link-block">
+                                      <a href="https://huggingface.co/ColorfulAI/xxx"
+                                          class="external-link button is-normal is-rounded is-dark">
+                                          <span class="icon">
+                                              &#129303;
+                                          </span>
+                                          <span>M4-7B-Audio</span>
+                                      </a>
+                                  </span>
+                                    
+                                    <span class="link-block">
+                                      <a href="https://huggingface.co/ColorfulAI/xxx"
+                                          class="external-link button is-normal is-rounded is-dark">
+                                          <span class="icon">
+                                              &#129303;
+                                          </span>
+                                          <span>M4-IT</span>
+                                      </a>
+                                  </span>
+
+                                    <span class="link-block">
+                                      <a href="https://huggingface.co/ColorfulAI/xxx"
+                                          class="external-link button is-normal is-rounded is-dark">
+                                          <span class="icon">
+                                              &#129303;
+                                          </span>
+                                          <span>M4-IT-Audio</span>
+                                      </a>
+                                  </span>
+                                    
+                                    <!-- <span class="link-block">
+                                        <a href=" "
+                                            class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon">
+                                                <i class="fas fa-globe"></i>
+                                            </span>
+                                            <span>Demo (Coming Soon)</span>
+                                        </a>
+                                    </span> -->
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="hero teaser">
+          <div class="container is-max-desktop">
+            <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+        
+          <div class="column is-four-fifths">
+            <figure class="image">
+                  <img src="/assets/img/teaser.png" />
+                  <!-- <figcaption><span class="dnerf">Figure 1.</span> <b>An overview of OmniMMI.</b> </figcaption> -->
+            </figure>
+            
+            </div>
+        
+        
+        </div>
+        
+        
+  
+        
+        <figcaption style="padding-top:10px;"><span class="dnerf">Figure 1.</span> <b>An overview of OmniMMI .</b> OmniMMI consists of two categories of multi-modal interactive challenges: streaming video understanding (top) and proactive reasoning (bottom). Each query is processed into natural language text and synthetic audio as input.</figcaption>
+        
+            </div>
+          </div>
+        </section>
+        
+
+<section class="section">
+    <div class="container is-max-desktop">
+
+    <h2 class="title has-text-centered" id="abstract">Abstract</h2>
+
+    <p>OmniMMI is a comprehensive multi-modal interaction benchmark tailored for OmniLLMs in streaming video contexts. OmniMMI encompasses over 1,121 real-world interactive videos and 2,290 questions, addressing two critical yet underexplored challenges in existing video benchmarks: streaming video understanding and proactive reasoning, across six distinct subtask. Moreover, we propose a novel framework, Multimodal Multiplexing Modeling (M4), designed to enhance real-time interactive reasoning with minimum finetuning on pre-trained MLLMs</p>
+
+    <p>✨ Highlights:</p>
+
+    <ol>
+      <li>
+        <p><strong>A Comprehensive Multi-modal Interaction Benchmark OmniMMI</strong></p>
+        <ul>
+          <li>
+            <p><strong>1.1 Streaming Temporal State Awareness.</strong> Streaming video understanding must build an understanding w.r.t. the current and historical temporal state incrementally, without accessing the future context. This contrasts with traditional MLLMs that can leverage the entire multi-modal contexts, posing challenges in our distinguished tasks of action prediction (AP), state grounding (SG), and multi-turn dependencies (MD).</p>
+          </li>
+          <li>
+            <p><strong>1.2 Proactive Reasoning and Turn-Taking.</strong> Generating responses proactively and appropriately anticipating the turn-taking time spot w.r.t. user's intentions and dynamic contexts is a crucial feature for general interactive agents. This typically requires models to identify speakers (SI), distinguish between noise or legitimate query (PT), and proactively initiate a response (PA).</p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>Multi-modal Multiplexing Modeling</strong></p>
+        <ul>
+          <li>
+            <p><strong>2.1 A small video-free synthetic instruction finetuning dataset M4-IT.</strong> We propose M4-IT, comprising four components: (i) the original instruction, which is a data replay from the instruction data of our base model, in our work, we use the LLaVA-NeXT; (ii) interleaved image-text instruction, which is created by reordering the question and image components of the original instruction; (iii) noise instruction, where GPT-4 is prompted to automatically generate statements that do not require a response; and (iv) stop instruction, where GPT-4 is prompted to generate stop phrases for the stop instruction.</p>
+          </li>
+          <li>
+            <p><strong>2.2 A multimodal multiplexing MLLM M4.</strong> The M4 introduces improvements in several key areas: Firstly, it enhances proactive generation by autonomously producing subsequent responses during video streaming without the need for human input. Secondly, it improves proactive interruption by assessing the legitimacy of new queries against mere noise in a single step. Lastly, it boasts efficient parallel decoding, allowing the model to decode the next token concurrently with processing the inputs.</p>
+          </li>
+        </ul>
+      </li>
+    </ol>
+    
+  </div>
+
+<!-- <div class="columns is-centered has-text-centered">
+
+  <p><br /></p>
+
+<div class="column is-four-fifths">
+<figure class="image">
+      <img src="/assets/img/teaser.png" />
+      <figcaption><span class="dnerf">Figure 1.</span> <b>An overview of OmniMMI.</b> </figcaption>
+</figure>
+
+</div>
+
+</div> -->
+
+
+</section>
+
+<section class="section" style="background-color:#efeff081">
+    <div class="container">
+
+    <h2 class="title is-3 has-text-centered" id="results-on-omnimmi">Results on OmniMMI</h2>
+
+    <div class="table-container has-text-centered" style="font-size:15px">
+
+      <table class="table is-fullwidth is-narrow is-hoverable">
+        <thead>
+          <tr>
+            <th style="text-align: left"><strong>Models</strong></th>
+            <th style="text-align: center"><strong>LLM</strong></th>
+            <th style="text-align: center"><strong>Num Frames</strong></th>
+            <th><strong>SG 1st</strong></th>
+            <th><strong>SG 2nd</strong></th>
+            <th><strong>SG 3rd</strong></th>
+            <th><strong>SG avg.</strong></th>
+            <th><strong>AP</strong></th>
+            <th><strong>MD 1st</strong></th>
+            <th><strong>MD 2nd</strong></th>
+            <th><strong>MD 3rd</strong></th>
+            <th><strong>MD avg.</strong></th>
+            <th><strong>SI</strong></th>
+            <th><strong>PA</strong></th>
+            <th><strong>PT</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="15"><em>Commercial Video LLMs</em></td>
+          </tr>
+          <tr>
+            <td style="text-align: left">Gemini-1.5-Pro</td>
+            <td>-</td>
+            <td>128</td>
+            <td>52.33</td>
+            <td>19.67</td>
+            <td>9.35</td>
+            <td>16.33</td>
+            <td>43.00</td>
+            <td>35.00</td>
+            <td>16.26</td>
+            <td>7.14</td>
+            <td>12.00</td>
+            <td>38.50</td>
+            <td>✗</td>
+            <td>✗</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">GPT-4o</td>
+            <td>-</td>
+            <td>50</td>
+            <td>48.67</td>
+            <td>16.95</td>
+            <td>5.61</td>
+            <td>15.00</td>
+            <td>39.50</td>
+            <td>34.33</td>
+            <td>15.57</td>
+            <td>7.65</td>
+            <td>12.33</td>
+            <td>17.00</td>
+            <td>✗</td>
+            <td>✗</td>
+          </tr>
+          <tr>
+            <td colspan="15"><em>Open-source Video LLMs</em></td>
+          </tr>
+          <tr>
+            <td>VideoChatGPT</td>
+            <td>LLaMA-7B</td>
+            <td>100</td>
+            <td>35.33</td>
+            <td>4.7</td>
+            <td>1.87</td>
+            <td>3.33</td>
+            <td>33.50</td>
+            <td>18.00</td>
+            <td>3.11</td>
+            <td>0.51</td>
+            <td>3.00</td>
+            <td>3.50</td>
+            <td>✗</td>
+            <td>✗</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">VideoChat2</td>
+            <td style="text-align: left">Vicuna-7B</td>
+            <td>8</td>
+            <td>19.67</td>
+            <td>2.37</td>
+            <td>0.93</td>
+            <td>2.33</td>
+            <td>27.50</td>
+            <td>16.33</td>
+            <td>3.81</td>
+            <td>0.51</td>
+            <td>2.67</td>
+            <td>1.00</td>
+            <td>✗</td>
+            <td>✗</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">Video-LLaVA</td>
+            <td style="text-align: left">Vicuna-7B</td>
+            <td>8</td>
+            <td>32.00</td>
+            <td>1.69</td>
+            <td>0.00</td>
+            <td>1.67</td>
+            <td>28.00</td>
+            <td>22.67</td>
+            <td>5.19</td>
+            <td>1.02</td>
+            <td>3.33</td>
+            <td>2.50</td>
+            <td>✗</td>
+            <td>✗</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">LLaMA-VID</td>
+            <td style="text-align: left">Vicuna-7B</td>
+            <td>128</td>
+            <td>29.67</td>
+            <td>2.38</td>
+            <td>0.00</td>
+            <td>2.33</td>
+            <td>29.00</td>
+            <td>21.33</td>
+            <td>3.80</td>
+            <td>0.51</td>
+            <td>2.67</td>
+            <td>7.50</td>
+            <td>✗</td>
+            <td>✗</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">MiniGPT4-Video</td>
+            <td style="text-align: left">Mistral-7B</td>
+            <td>45</td>
+            <td>25.00</td>
+            <td>4.75</td>
+            <td>1.87</td>
+            <td>4.00</td>
+            <td>23.00</td>
+            <td>12.67</td>
+            <td>2.08</td>
+            <td>0.51</td>
+            <td>1.67</td>
+            <td>3.00</td>
+            <td>✗</td>
+            <td>✗</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">PLLaVA</td>
+            <td style="text-align: left">Vicuna-7B</td>
+            <td>16</td>
+            <td>37.33</td>
+            <td>3.73</td>
+            <td>0.93</td>
+            <td>3.33</td>
+            <td>30.00</td>
+            <td>21.00</td>
+            <td>3.46</td>
+            <td>0.00</td>
+            <td>1.33</td>
+            <td>3.00</td>
+            <td>✗</td>
+            <td>✗</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">LLaVA-NeXT-Video</td>
+            <td style="text-align: left">Vicuna-7B</td>
+            <td>32</td>
+            <td>30.33</td>
+            <td>2.37</td>
+            <td>0.93</td>
+            <td>3.00</td>
+            <td>30.50</td>
+            <td>17.00</td>
+            <td>2.08</td>
+            <td>0.51</td>
+            <td>2.00</td>
+            <td>1.50</td>
+            <td>✗</td>
+            <td>✗</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">ShareGPT4Video</td>
+            <td style="text-align: left">Llama3-8B</td>
+            <td>16</td>
+            <td>34.00</td>
+            <td>2.03</td>
+            <td>0.93</td>
+            <td>2.00</td>
+            <td>29.00</td>
+            <td>20.33</td>
+            <td>3.46</td>
+            <td>0.00</td>
+            <td>2.00</td>
+            <td>4.50</td>
+            <td>✗</td>
+            <td>✗</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">LLaMA-VID-13B</td>
+            <td style="text-align: left">Vicuna-13B</td>
+            <td>128</td>
+            <td>33.33</td>
+            <td>2.03</td>
+            <td>0.00</td>
+            <td>1.33</td>
+            <td>30.50</td>
+            <td>22.67</td>
+            <td>3.46</td>
+            <td>0.51</td>
+            <td>3.33</td>
+            <td>8.50</td>
+            <td>✗</td>
+            <td>✗</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">PLLaVA-13B</td>
+            <td style="text-align: left">Vicuna-13B</td>
+            <td>16</td>
+            <td>41.33</td>
+            <td>3.39</td>
+            <td>0.00</td>
+            <td>2.67</td>
+            <td>25.00</td>
+            <td>25.67</td>
+            <td>5.54</td>
+            <td>2.04</td>
+            <td>4.33</td>
+            <td>6.50</td>
+            <td>✗</td>
+            <td>✗</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">PLLaVA-34B</td>
+            <td style="text-align: left">Yi-34B</td>
+            <td>16</td>
+            <td>29.00</td>
+            <td>4.07</td>
+            <td>0.00</td>
+            <td>3.67</td>
+            <td>28.50</td>
+            <td>18.67</td>
+            <td>4.50</td>
+            <td>0.00</td>
+            <td>3.00</td>
+            <td>5.00</td>
+            <td>✗</td>
+            <td>✗</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">LLaVA-NeXT-Video-34B</td>
+            <td style="text-align: left">Yi-34B</td>
+            <td>32</td>
+            <td>30.33</td>
+            <td>2.71</td>
+            <td>0.00</td>
+            <td>2.67</td>
+            <td>32.50</td>
+            <td>14.67</td>
+            <td>2.08</td>
+            <td>0.51</td>
+            <td>1.67</td>
+            <td>1.50</td>
+            <td>✗</td>
+            <td>✗</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">LongVA</td>
+            <td style="text-align: left">Qwen2-7B</td>
+            <td>32</td>
+            <td>33.33</td>
+            <td>4.07</td>
+            <td>0.00</td>
+            <td>3.33</td>
+            <td>37.50</td>
+            <td>33.33</td>
+            <td>4.07</td>
+            <td>0.00</td>
+            <td>2.33</td>
+            <td>3.00</td>
+            <td>✗</td>
+            <td>✗</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">LongVILA</td>
+            <td style="text-align: left">Llama3-8B</td>
+            <td>128</td>
+            <td>39.00</td>
+            <td>4.41</td>
+            <td>0.93</td>
+            <td>4.33</td>
+            <td>39.50</td>
+            <td>39.00</td>
+            <td>4.41</td>
+            <td>0.93</td>
+            <td>3.00</td>
+            <td>10.00</td>
+            <td>✗</td>
+            <td>✗</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">LongLLaVA</td>
+            <td style="text-align: left">Jamba-9B</td>
+            <td>128</td>
+            <td>36.33</td>
+            <td>3.73</td>
+            <td>0.00</td>
+            <td>3.33</td>
+            <td>29.00</td>
+            <td>36.33</td>
+            <td>3.73</td>
+            <td>0.00</td>
+            <td>3.67</td>
+            <td>10.00</td>
+            <td>✗</td>
+            <td>✗</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">VideoLLM-online</td>
+            <td>Llama3-8B</td>
+            <td>1 fps</td>
+            <td>18.00</td>
+            <td>4.75</td>
+            <td>0.00</td>
+            <td>4.67</td>
+            <td>35.00</td>
+            <td>18.00</td>
+            <td>4.75</td>
+            <td>0.00</td>
+            <td>1.33</td>
+            <td>0.00</td>
+            <td>✗</td>
+            <td>✗</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">VideoLLaMB</td>
+            <td style="text-align: left">Vicuna-7B</td>
+            <td>32 / 1 fps</td>
+            <td>32.67</td>
+            <td>2.71</td>
+            <td>0.00</td>
+            <td>2.33</td>
+            <td>29.50</td>
+            <td>32.67</td>
+            <td>2.71</td>
+            <td>0.00</td>
+            <td>3.00</td>
+            <td>3.00</td>
+            <td>✗</td>
+            <td>✗</td>
+          </tr>
+          <tr>
+            <td colspan="15"><em>Omni LLMs</em></td>
+          </tr>
+          <tr>
+            <td style="text-align: left">VideoLLaMA2</td>
+            <td style="text-align: left">Qwen2-7B</td>
+            <td>8</td>
+            <td>41.00</td>
+            <td>12.88</td>
+            <td>0.00</td>
+            <td>10.33</td>
+            <td>35.00</td>
+            <td>23.33</td>
+            <td>4.15</td>
+            <td>0.51</td>
+            <td>3.00</td>
+            <td>5.00</td>
+            <td>✗</td>
+            <td>✗</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">VITA</td>
+            <td style="text-align: left">Mistrl-8×7B</td>
+            <td>16</td>
+            <td>8.67</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>39.00</td>
+            <td>11.33</td>
+            <td>3.11</td>
+            <td>1.52</td>
+            <td>2.00</td>
+            <td>1.50</td>
+            <td>✗</td>
+            <td>67.00</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">MiniOmini2</td>
+            <td style="text-align: left">Qwen2-0.5B</td>
+            <td>1</td>
+            <td>17.00</td>
+            <td>5.08</td>
+            <td>0.93</td>
+            <td>4.67</td>
+            <td>14.00</td>
+            <td>6.00</td>
+            <td>1.00</td>
+            <td>0.00</td>
+            <td>1.00</td>
+            <td>1.00</td>
+            <td>✗</td>
+            <td>✗</td>
+          </tr>
+          <tr>
+            <td style="text-align: left"><strong>M4 (Ours)</strong></td>
+            <td style="text-align: left">Qwen2-7B</td>
+            <td>32 / 1 fps</td>
+            <td>35.67</td>
+            <td>6.44</td>
+            <td>1.87</td>
+            <td>5.67</td>
+            <td>33.50</td>
+            <td>35.67</td>
+            <td>6.44</td>
+            <td>1.87</td>
+            <td>1.67</td>
+            <td>9.00</td>
+            <td>25.50</td>
+            <td>62.00</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><span class="dnerf">Table 1.</span> <b>Performance comparison of existing VideoLLM on OmniMMI</b>.  The 1st, 2nd, 3rd of <b>SG</b> and <b>MD</b> tasks represent the cumulative accuracy up to and including these stages. The 'avg.' indicates average accuracy across all data points.</p>
+
+    </div>
+
+    
+
+    <!-- </div>
+</section>
+
+
+<section class="section" >
+    <div class="container" markdown="1"> -->
+
+    <p><br /></p>
+
+    <h2 class="title is-3 has-text-centered" id="data-statistics">Data Statistics</h2>
+
+    <div class="columns is-centered has-text-centered">
+
+      <!-- <div class="column  is-centered has-text-centered is-four-fifths"> -->
+        <div class="column  is-three-fifths">
+
+        <figure class="image">
+      <img src="/assets/img/dur_length.png" />
+      <figcaption><span class="dnerf">Figure 2.</span> <b>Distrubution of video duration length and question length.</b>  </figcaption>
+</figure>
+
+      </div>
+
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+<div class="column  is-centered has-text-centered is-three-fifths">
+
+        <figure class="image">
+      <img src="/assets/img/pie_chart.png" />
+      <figcaption><span class="dnerf">Figure 3.</span> <b>Distribution and examples of different types of query prompts</a>.</b> </figcaption>
+</figure>
+
+      </div>
+
+
+</div>
+
+  </div>
+</section>
+
+
+
+<section class="section" style="background-color:#efeff081">
+  <div class="container is-max-desktop">
+
+  <h2 class="title is-3 has-text-centered" id="multimodal-multiplexing-modeling">Multimodal Multiplexing Modeling</h2>
+
+  <div class="columns is-centered has-text-centered">
+    <div class="column  is-centered has-text-centered">
+    
+            <figure class="image">
+          <img src="/assets/img/framework.png" />
+          <figcaption><span class="dnerf">Figure 4.</span> <b>Multiplexing Modeling of M4</a>.</b> \(v\) is the streaming video, \(q_i\) denotes the input query, \(t_i\) indicates the generated token, \(n_i\) denotes noise token which will be discarded from the KVCache. The streaming video KVCache is computed to trigger a highlight spot index for the next response generation. Proactive interruption is facilitated through the computation of specific tokens designed for noise and stop signals.  The parallel decoding takes mask strategy with dynamic KVCache to process multiple queries in one forward step. </figcaption>
+    </figure>
+    
+          </div>
+    
+    </div>
+
+  <h3 class="title is-4" id="proactive-generation">Proactive Generation</h3>
+
+  <p>We derive an attention-based inference method, highlight spot, to enable videoLLM real-time proactive generation without additional training.</p>
+  <ol>
+    <li>For each in-coming frame \(v\), we pre-compute \(K=W_kv\) and \(Vj=W_Vv\) vectors to form a KV cache. The attention scores between the query \(q\) and the frames are calculated \(w.r.t.\) the KV cache, \(i.e.\), \(s = \text{softmax}\left(\frac{qK^{\rm T}}{\sqrt{d_k}}\right)\), with their mean and variance computed as \(\mu,\sigma\)</li>
+    <li>Indices of frames whose attention scores exceed the Gaussian average \(\mu + \alpha \times \sigma\) are stored in a max heap, where \(\alpha\) is a Gaussian factor.</li>
+    <li>The peak index from max-heap is extracted. If a frame index has a higher occurrence frequency than a predetermined threshold, it is designated as an "alert", triggering a response generation.</li>
+  </ol>
+
+  <p><br /></p>
+
+  <details open="">
+    <summary><b>Proactive Generation Demo</b></summary>
+    <div class="is-centered has-text-centered" style="background-color:rgba(117, 209, 215, 0.1)">
+    
+    <h4 style="font-size: 20px; padding: 10px 0 10px;">Query: Please notify me when there is a mixer.</h4>
+      <video poster="" id="proactive_generation" autoplay="" controls="" muted="" loop="" playsinline="" height="70%">
+        <source src="/assets/img/demo_water_alert.mp4" />
+      </video>
+    </div>
+    </details>
+
+    <p><br /></p>
+
+  <h3 class="title is-4" id="recurrent-memory-bridge-layers">Proative Turn Taking</h3>
+
+  <p>To equip the model with real-time interactive modeling capabilities, we propose incorporating interruption detection and parallel decoding.</p>
+
+  <ol>
+    <li><b>Start Detection.</b>In this process, we calculate the probability of the "&lt;bos&gt;" token as a reference point. Drawing inspiration from <a href="https://github.com/FasterDecoding/Medusa">medusa</a>, we utilize the reciprocal of perplexity as the threshold for identifying this special token. <p>
+      \[
+      p(x_{n+k} \mid x_1, x_2, \ldots, x_{n+k-1}) > \beta \cdot \exp \left( -S\left( p(\cdot \mid x_1, x_2, \ldots, x_{n+k-1}) \right) \right)
+      \]
+  </p>, where \(\beta\) is a scaling factor, \(S(\cdot)\) is the entropy function. The threshold for noise detection is dependent on the perplexity of the model. When there is a larger perplexity, the threshold is reduced, indicating the query is more like a noise that does not need a response.</li>
+    <li><b>End Detection.</b> Knowing when to stop is a critical feature of an interactive system, which we consider essential for developing a duplex system. Similar to noise detection, when presented with a new query, we assess whether to halt the generation process by calculating the probability of the "&lt;eos&gt;" token in a single forward pass. This decision is made using the same threshold employed in start detection.</li>
+    <li><b>Parallel Decoding.</b> when the model is generating new tokens and a new input query arises, the model decodes the next token alongside the original token using a combination of causal masks, prefix masks, and block masks. Specifically, the causal mask is applied for the language model, the prefix mask pertains to the video context, and the block mask is designed to separate the decoding procedures of the input and output in parallel.</li>
+  </ol>
+
+  <p><br /></p>
+
+  <details open="">
+    <summary><b>Proactive Turn-taking Demo</b></summary>
+    <div class="is-centered has-text-centered" style="background-color:rgba(117, 209, 215, 0.1)">
+    
+    <h4 style="font-size: 20px; padding: 10px 0 10px;">Task: normal query \(V.S.\) noise query.</h4>
+      <video poster="" id="proactive_turntaking" autoplay="" controls="" muted="" loop="" playsinline="" height="70%">
+        <source src="/assets/img/demo_water_turntaking.mp4" />
+      </video>
+    </div>
+    </details>
+
+    <p><br /></p>
+
+</div>
+</section>
+
+
+<section class="section">
+    <div class="container is-max-desktop">
+
+    <h2 class="title" id="citation">Citation</h2>
+
+    <div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@misc</span><span class="p">{</span><span class="nl">mm-niavh</span><span class="p">,</span>
+    <span class="na">title</span><span class="p">=</span><span class="s">{OmniMMI: A Comprehensive Multi-modal Interaction Benchmark in Streaming Video Contexts}</span><span class="p">,</span>
+    <span class="na">author</span><span class="p">=</span><span class="s">{Wang, Yuxuan and Wang, Yueqian and Chen, Bo and Wu, Tong and Zhao, Dongyan and Zheng, Zilong}</span><span class="p">,</span>
+    <span class="na">publisher</span><span class="p">=</span><span class="s">{arxiv}</span><span class="p">,</span>
+    <span class="na">year</span><span class="p">=</span><span class="s">{2024}</span>
+<span class="p">}</span>
+
+</code></pre></div>    </div>
+
+  </div>
+</section>
+
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-8">
+                <div class="content">
+                    <p>
+                        This website is This website is adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under a <a rel="license"
+                            href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                            Commons Attribution-ShareAlike 4.0 International License</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"
+    crossorigin="anonymous"></script>
+
+<!-- Bulma -->
+<script src="https://cdn.jsdelivr.net/npm/bulma-slider@2.0.5/dist/js/bulma-slider.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.24/dist/js/bulma-carousel.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs-bibtex@2.1.0/prism-bibtex.min.js">
+</script>
+
+</body>
+
+
+</html>

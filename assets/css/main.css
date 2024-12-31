@@ -1,0 +1,101 @@
+/******************************************************************************* Variables used throughout the theme. To adjust anything, simply edit the variables below and rebuild the theme. *****************************************************************************/
+/******************************************************************************* Themes *****************************************************************************/
+:root { --global-bg-color: #ffffff; --global-text-color: #000000; --global-text-color-secondary: #424242; --global-theme-color: #0076df; --global-hover-color: #00369f; --global-footer-bg-color: #424242; --global-footer-text-color: #e8e8e8; --global-footer-link-color: #ffffff; --global-icon-color: #424242; }
+:root .fa-sun { display: none; }
+:root .fa-moon { padding-left: 10px; padding-top: 12px; display: block; }
+
+html[data-theme='dark'] { --global-bg-color: #424242; --global-text-color: #e8e8e8; --global-text-color-secondary: #e8e8e8; --global-theme-color: #2698BA; --global-hover-color: #7bcce4; --global-footer-bg-color: #e8e8e8; --global-footer-text-color: #424242; --global-footer-link-color: #000000; --global-icon-color: navajowhite; }
+html[data-theme='dark'] .fa-sun { padding-left: 10px; padding-top: 12px; display: block; }
+html[data-theme='dark'] .fa-moon { display: none; }
+
+/******************************************************************************* Styles for the base elements of the theme. *****************************************************************************/
+p, h1, h2, h3, h4, h5, h6, em, div, strong { color: var(--global-text-color); font-family: 'Google Sans', sans-serif; }
+
+pre[class*="language-"] { background-color: #f8f9fa !important; white-space: pre; word-wrap: break-word !important; /* Internet Explorer 5.5+ */ }
+
+table.table a { color: var(--global-theme-color); }
+table.table a:hover { color: var(--global-hover-color); text-decoration: underline; }
+table.table a:hover:after { width: 100%; }
+
+b { font-weight: bold !important; }
+
+p { text-align: justify !important; }
+
+h2 { font-size: 2rem; margin-bottom: 1.5rem; }
+
+.equation { margin-bottom: 1rem; text-align: center; }
+
+.caption { font-size: 0.875rem; margin-top: 0.75rem; margin-bottom: 1.5rem; text-align: center; }
+
+body { font-family: 'Noto Sans', sans-serif; }
+
+.footer .icon-link { font-size: 25px; color: #000; }
+
+.link-block a { margin-top: 5px; margin-bottom: 5px; }
+
+.dnerf { font-variant: small-caps; }
+
+.teaser .hero-body { padding-top: 0; padding-bottom: 3rem; }
+
+.teaser { font-family: 'Google Sans', sans-serif; }
+
+.publication-banner { max-height: parent; }
+
+.publication-banner video { position: relative; left: auto; top: auto; transform: none; object-fit: fit; }
+
+.publication-title { font-family: 'Google Sans', sans-serif; }
+
+.publication-authors { font-family: 'Google Sans', sans-serif; }
+
+.publication-venue { color: #555; font-weight: bold; }
+
+.publication-awards { color: #ff3860; font-weight: bolder; }
+
+.publication-authors a { color: #209cee !important; }
+
+.publication-authors a:hover { text-decoration: underline; }
+
+.author-block { display: inline-block; }
+
+.publication-authors { /*color: #4286f4;*/ }
+
+.publication-video { position: relative; width: 100%; height: 0; padding-bottom: 56.25%; overflow: hidden; border-radius: 10px !important; }
+
+.publication-video iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+.results-carousel { overflow: hidden; }
+
+.results-carousel .item { margin: 5px; overflow: hidden; border: 1px solid #bbb; border-radius: 10px; padding: 0; font-size: 0; }
+
+.results-carousel video { margin: 0; }
+
+.interpolation-panel { background: #f5f5f5; border-radius: 10px; }
+
+.interpolation-panel .interpolation-image { width: 100%; border-radius: 5px; }
+
+.interpolation-panel .slider { margin: 0 !important; }
+
+.interpolation-panel .slider { margin: 0 !important; }
+
+#interpolation-image-wrapper { width: 100%; }
+
+#interpolation-image-wrapper img { border-radius: 5px; }
+
+code { color: var(--global-theme-color); }
+
+html.transition, html.transition *, html.transition *:before, html.transition *:after { transition: all 750ms !important; transition-delay: 0 !important; }
+
+.table .is-1 { background-color: #4d2d61; color: #fff; font-weight: 700; }
+
+.table .is-2 { background-color: #aa98b5; color: #fff; font-weight: 500; }
+
+.table .is-3 { background-color: #F6F1FE; }
+
+.table .is-ignorable { color: #D3D3D3; }
+
+/* Set the same height for both images */
+.equal-height {
+    height: 300px; /* Adjust this value as needed */
+    object-fit: contain; /* Ensures the image scales proportionally without being cropped */
+  }
+  
