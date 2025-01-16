@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>OmniMMI</title>
+<meta name="description" content="OmniMMI: A Comprehensive Multi-modal Interaction Benchmark in Streaming Video Contexts">
+
+<!-- Open Graph -->
+
+
+<!-- Bulma & MDB -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.24/dist/css/bulma-carousel.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-slider@2.0.5/dist/css/bulma-slider.min.css">
+
+<!-- Fonts & Icons -->
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous">
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css"
+    crossorigin="anonymous">
+<link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Lora|Google+Sans|Material+Icons">
+
+<!-- Code Syntax Highlighting -->
+<!-- <link rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/.css" /> -->
+
+<!-- Styles -->
+<link rel="shortcut icon" href="/assets/img/favicon.ico">
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<link rel="canonical" href="/">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-solarizedlight.min.css"/>
+
+
+<!-- Theming-->
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD4J271NBT"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag () { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-XD4J271NBT');
+</script>
+
+
+
+
+
+    
+<!-- MathJax -->
+<script type="text/javascript">
+    window.MathJax = {
+        tex: {
+            tags: 'ams'
+        }
+    };
+</script>
+<script defer type="text/javascript" id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+
+</head>
+
+<body>
+    <!-- Header -->
+
+    
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    <div class="navbar-menu">
+        <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+            <a class="navbar-item" href="http://omnimmi.github.io">
+                <span class="icon">
+                    <i class="fas fa-home"></i>
+                </span>
+            </a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    More Research
+                </a>
+                <div class="navbar-dropdown">
+
+                    <a class="navbar-item" href="https://videollamb.github.io/">
+                        VideoLLaMB
+                    </a>  
+                  
+                    <a class="navbar-item" href="https://bigai-nlco.github.io/ExoViP/">
+                        ExoViP
+                    </a>
+                    
+                    <a class="navbar-item" href="https://videohallucer.github.io/">
+                        VideoHallucer
+                    </a>
+                    
+                    <a class="navbar-item" href="https://github.com/bigai-nlco/VideoTGB">
+                        VideoTGB
+                    </a>
+                    
+                    <a class="navbar-item" href="https://vstar-benchmark.github.io/">
+                        VSTAR
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+
+    <!-- Content -->
+
+    <div class="container is-fullhd mt-5">
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container is-max-desktop">
+                    <div class="columns is-centered">
+                        <div class="column has-text-centered">
+                            <div style="display: flex;padding-bottom: 20px;">
+                                <!-- <img src="/assets/img/logo.png"
+                                    width="150px" style="vertical-align: middle;"> -->
+                                <h1 class="title is-2 publication-title"><span style="display: block;">OmniMMI: A Comprehensive Multi-modal Interaction Benchmark in Streaming Video Contexts</span></h1>
+                            </div>
+                            
+                            
+
+                            <div class="is-size-5 publication-authors">
+                                
+                                <span class="author-block"><a href="https://patrick-tssn.github.io/">Yuxuan Wang</a><sup>1</sup></span>, 
+                                
+                                <span class="author-block"><a href="https://yellow-binary-tree.github.io/">Yueqian Wang</a><sup>2</sup></span>, 
+                                
+                                <span class="author-block"><a>Bo Chen</a><sup>3</sup></span>, 
+
+                                <span class="author-block"><a href="https://wutong4012.github.io/">Tong Wu</a><sup>1</sup></span>, 
+
+                                <span class="author-block"><a href="https://www.icst.pku.edu.cn/zhaodongyan/en/">Dongyan Zhao</a><sup>2</sup></span>, 
+                                
+                                <span class="author-block"><a href="https://zilongzheng.github.io">Zilong Zheng</a><sup>1, <i class="fa fa-envelope"></i></sup></span>
+                                
+                            </div>
+                            
+
+                            
+                            <div class="is-size-5 publication-authors">
+                                
+                                <span class="author-block"><sup>1</sup>BIGAI</span>, 
+                                
+                                <span class="author-block"><sup>2</sup>PKU</span>, 
+                                
+                                <span class="author-block"><sup>3</sup>SJTU</span>
+                                
+                            </div>
+                            
+
+                            
+
+                            <div class="column has-text-centered">
+                                <div class="publication-links">
+                                    
+                                    
+                                    <span class="link-block">
+                                        <a href="https://arxiv.org/abs/xxx.xxxx"
+                                            class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon">
+                                                <i class="ai ai-arxiv"></i>
+                                            </span>
+                                            <span>arXiv</span>
+                                        </a>
+                                    </span>
+                                    
+                                    
+                                    
+                                    <!-- Code Link. -->
+                                    <span class="link-block">
+                                        <a href="https://github.com/bigai-nlco/OmniMMI"
+                                            class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon">
+                                                <i class="fab fa-github"></i>
+                                            </span>
+                                            <span>Code (OmniMMI)</span>
+                                        </a>
+                                    </span>
+
+                                    <!-- Code Link. -->
+                                    <span class="link-block">
+                                      <a href="https://github.com/bigai-nlco/OmniMMI"
+                                          class="external-link button is-normal is-rounded is-dark">
+                                          <span class="icon">
+                                              <i class="fab fa-github"></i>
+                                          </span>
+                                          <span>Code (M4)</span>
+                                      </a>
+                                  </span>
+                                    
+                                  <br>  
+
+                                    <span class="link-block">
+                                      <a href="https://huggingface.co/ColorfulAI/xxx"
+                                          class="external-link button is-normal is-rounded is-dark">
+                                          <span class="icon">
+                                              &#129303;
+                                          </span>
+                                          <span>OmniMMI</span>
+                                      </a>
+                                  </span>
+                                    
+                                    
+                                    <span class="link-block">
+                                        <a href="https://huggingface.co/ColorfulAI/xxx"
+                                            class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon">
+                                                &#129303;
+                                            </span>
+                                            <span>M4-7B</span>
+                                        </a>
+                                    </span>
+
+                                    <span class="link-block">
+                                      <a href="https://huggingface.co/ColorfulAI/xxx"
+                                          class="external-link button is-normal is-rounded is-dark">
+                                          <span class="icon">
+                                              &#129303;
+                                          </span>
+                                          <span>M4-7B-Audio</span>
+                                      </a>
+                                  </span>
+                                    
+                                    <span class="link-block">
+                                      <a href="https://huggingface.co/ColorfulAI/xxx"
+                                          class="external-link button is-normal is-rounded is-dark">
+                                          <span class="icon">
+                                              &#129303;
+                                          </span>
+                                          <span>M4-IT</span>
+                                      </a>
+                                  </span>
+
+                                    <!-- <span class="link-block">
+                                      <a href="https://huggingface.co/ColorfulAI/xxx"
+                                          class="external-link button is-normal is-rounded is-dark">
+                                          <span class="icon">
+                                              &#129303;
+                                          </span>
+                                          <span>M4-IT-Audio</span>
+                                      </a>
+                                  </span> -->
+                                    
+                                    <!-- <span class="link-block">
+                                        <a href=" "
+                                            class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon">
+                                                <i class="fas fa-globe"></i>
+                                            </span>
+                                            <span>Demo (Coming Soon)</span>
+                                        </a>
+                                    </span> -->
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+<section class="section" style="background-color:#efeff081">
+  <div class="container is-max-desktop">
+
+  <h2 class="title is-3 has-text-centered" id="multimodal-multiplexing-modeling">Multimodal Multiplexing Modeling</h2>
+
+  <div class="columns is-centered has-text-centered">
+    <div class="column  is-centered has-text-centered">
+    
+            <figure class="image">
+          <img src="/assets/img/framework.png" />
+          <figcaption><span class="dnerf">Figure 4.</span> <b>Multiplexing Modeling of M4</a>.</b> \(v\) is the streaming video, \(q_i\) denotes the input query, \(t_i\) indicates the generated token, \(n_i\) denotes noise token which will be discarded from the KVCache. The streaming video KVCache is computed to trigger a highlight spot index for the next response generation. Proactive interruption is facilitated through the computation of specific tokens designed for noise and stop signals.  The parallel decoding takes mask strategy with dynamic KVCache to process multiple queries in one forward step. </figcaption>
+    </figure>
+    
+          </div>
+    
+    </div>
+
+  <h3 class="title is-4" id="proactive-generation">Proactive Generation</h3>
+
+  <p>We derive an attention-based inference method, highlight spot, to enable videoLLM real-time proactive generation without additional training.</p>
+  <ol>
+    <li>For each in-coming frame \(v\), we pre-compute \(K=W_kv\) and \(Vj=W_Vv\) vectors to form a KV cache. The attention scores between the query \(q\) and the frames are calculated \(w.r.t.\) the KV cache, \(i.e.\), \(s = \text{softmax}\left(\frac{qK^{\rm T}}{\sqrt{d_k}}\right)\), with their mean and variance computed as \(\mu,\sigma\)</li>
+    <li>Indices of frames whose attention scores exceed the Gaussian average \(\mu + \alpha \times \sigma\) are stored in a max heap, where \(\alpha\) is a Gaussian factor.</li>
+    <li>The peak index from max-heap is extracted. If a frame index has a higher occurrence frequency than a predetermined threshold, it is designated as an "alert", triggering a response generation.</li>
+  </ol>
+
+  <p><br /></p>
+
+  <details open="">
+    <summary><b>Proactive Generation Demo</b></summary>
+    <div class="is-centered has-text-centered" style="background-color:rgba(117, 209, 215, 0.1)">
+    
+    <h4 style="font-size: 20px; padding: 10px 0 10px;">Query: Please notify me when there is a mixer.</h4>
+      <video poster="" id="proactive_generation" autoplay="" controls="" muted="" loop="" playsinline="" height="70%">
+        <source src="/assets/img/demo_water_alert.mp4" />
+      </video>
+    </div>
+    </details>
+
+    <p><br /></p>
+
+  <h3 class="title is-4" id="recurrent-memory-bridge-layers">Proative Turn Taking</h3>
+
+  <p>To equip the model with real-time interactive modeling capabilities, we propose incorporating interruption detection and parallel decoding.</p>
+
+  <ol>
+    <li><b>Start Detection.</b>In this process, we calculate the probability of the "&lt;bos&gt;" token as a reference point. Drawing inspiration from <a href="https://github.com/FasterDecoding/Medusa">medusa</a>, we utilize the reciprocal of perplexity as the threshold for identifying this special token. <p>
+      \[
+      p(x_{n+k} \mid x_1, x_2, \ldots, x_{n+k-1}) > \beta \cdot \exp \left( -S\left( p(\cdot \mid x_1, x_2, \ldots, x_{n+k-1}) \right) \right)
+      \]
+  </p>, where \(\beta\) is a scaling factor, \(S(\cdot)\) is the entropy function. The threshold for noise detection is dependent on the perplexity of the model. When there is a larger perplexity, the threshold is reduced, indicating the query is more like a noise that does not need a response.</li>
+    <li><b>End Detection.</b> Knowing when to stop is a critical feature of an interactive system, which we consider essential for developing a duplex system. Similar to noise detection, when presented with a new query, we assess whether to halt the generation process by calculating the probability of the "&lt;eos&gt;" token in a single forward pass. This decision is made using the same threshold employed in start detection.</li>
+    <li><b>Parallel Decoding.</b> when the model is generating new tokens and a new input query arises, the model decodes the next token alongside the original token using a combination of causal masks, prefix masks, and block masks. Specifically, the causal mask is applied for the language model, the prefix mask pertains to the video context, and the block mask is designed to separate the decoding procedures of the input and output in parallel.</li>
+  </ol>
+
+  <p><br /></p>
+
+  <details open="">
+    <summary><b>Proactive Turn-taking Demo</b></summary>
+    <div class="is-centered has-text-centered" style="background-color:rgba(117, 209, 215, 0.1)">
+    
+    <h4 style="font-size: 20px; padding: 10px 0 10px;">Task: normal query \(V.S.\) noise query.</h4>
+      <video poster="" id="proactive_turntaking" autoplay="" controls="" muted="" loop="" playsinline="" height="70%">
+        <source src="/assets/img/demo_water_turntaking.mp4" />
+      </video>
+    </div>
+    </details>
+
+    <p><br /></p>
+
+</div>
+</section>
+
+
+<section class="section">
+    <div class="container is-max-desktop">
+
+    <h2 class="title" id="citation">Citation</h2>
+
+    <div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@misc</span><span class="p">{</span><span class="nl">mm-niavh</span><span class="p">,</span>
+    <span class="na">title</span><span class="p">=</span><span class="s">{OmniMMI: A Comprehensive Multi-modal Interaction Benchmark in Streaming Video Contexts}</span><span class="p">,</span>
+    <span class="na">author</span><span class="p">=</span><span class="s">{Wang, Yuxuan and Wang, Yueqian and Chen, Bo and Wu, Tong and Zhao, Dongyan and Zheng, Zilong}</span><span class="p">,</span>
+    <span class="na">publisher</span><span class="p">=</span><span class="s">{arxiv}</span><span class="p">,</span>
+    <span class="na">year</span><span class="p">=</span><span class="s">{2024}</span>
+<span class="p">}</span>
+
+</code></pre></div>    </div>
+
+  </div>
+</section>
+
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-8">
+                <div class="content">
+                    <p>
+                        This website is This website is adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under a <a rel="license"
+                            href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                            Commons Attribution-ShareAlike 4.0 International License</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"
+    crossorigin="anonymous"></script>
+
+<!-- Bulma -->
+<script src="https://cdn.jsdelivr.net/npm/bulma-slider@2.0.5/dist/js/bulma-slider.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.24/dist/js/bulma-carousel.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs-bibtex@2.1.0/prism-bibtex.min.js">
+</script>
+
+</body>
+
+
+</html>
