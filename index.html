@@ -492,6 +492,7 @@
 
   
 
+
   <section class="section" style="background-color:#efeff081">
     <div class="container">
       <h2 class="title is-3 has-text-centered" id="results-lvlm-on-omnimmi">Leaderboard of Large Video Language Model on OmniMMI</h2>
@@ -499,30 +500,33 @@
       <div class="table-container has-text-centered" style="font-size:15px">
         <p style="text-align: center; margin-bottom: 20px;">
           The leaderboard is ranked by the average score without proactive tasks (avg. w/o P), reflecting the average score across four tasks: SG, AP, MD, and SI. You can click on the task bar to view the rank for a specific subtask.
-      </p>
+        </p>
         <table class="table is-fullwidth is-narrow is-hoverable" id="table1">
           <thead>
             <tr>
-              <th style="text-align: left" onclick="sortTable('table1', 0)"><strong>Models</strong></th>
-              <th style="text-align: center" onclick="sortTable('table1', 1)"><strong>LLM</strong></th>
-              <th style="text-align: center" onclick="sortTable('table1', 2)"><strong>Num Frames</strong></th>
-              <th onclick="sortTable('table1', 3)"><strong>SG 1st</strong></th>
-              <th onclick="sortTable('table1', 4)"><strong>SG 2nd</strong></th>
-              <th onclick="sortTable('table1', 5)"><strong>SG 3rd</strong></th>
-              <th onclick="sortTable('table1', 6)"><strong>SG avg.</strong></th>
-              <th onclick="sortTable('table1', 7)"><strong>AP</strong></th>
-              <th onclick="sortTable('table1', 8)"><strong>MD 1st</strong></th>
-              <th onclick="sortTable('table1', 9)"><strong>MD 2nd</strong></th>
-              <th onclick="sortTable('table1', 10)"><strong>MD 3rd</strong></th>
-              <th onclick="sortTable('table1', 11)"><strong>MD avg.</strong></th>
-              <th onclick="sortTable('table1', 12)"><strong>SI</strong></th>
-              <th onclick="sortTable('table1', 13)"><strong>PA</strong></th>
-              <th onclick="sortTable('table1', 14)"><strong>PT</strong></th>
-              <th onclick="sortTable('table1', 15)"><strong>avg. w/o P</strong></th>
+              <th style="text-align: center" onclick="sortTable('table1', 0)"><strong>Rank</strong></th>
+              <th style="text-align: left" onclick="sortTable('table1', 1)"><strong>Models</strong></th>
+              <th style="text-align: center" onclick="sortTable('table1', 2)"><strong>LLM</strong></th>
+              <th style="text-align: center" onclick="sortTable('table1', 3)"><strong>Num Frames</strong></th>
+              <th onclick="sortTable('table1', 4)"><strong>SG 1st</strong></th>
+              <th onclick="sortTable('table1', 5)"><strong>SG 2nd</strong></th>
+              <th onclick="sortTable('table1', 6)"><strong>SG 3rd</strong></th>
+              <th onclick="sortTable('table1', 7)"><strong>SG avg.</strong></th>
+              <th onclick="sortTable('table1', 8)"><strong>AP</strong></th>
+              <th onclick="sortTable('table1', 9)"><strong>MD 1st</strong></th>
+              <th onclick="sortTable('table1', 10)"><strong>MD 2nd</strong></th>
+              <th onclick="sortTable('table1', 11)"><strong>MD 3rd</strong></th>
+              <th onclick="sortTable('table1', 12)"><strong>MD avg.</strong></th>
+              <th onclick="sortTable('table1', 13)"><strong>SI</strong></th>
+              <th onclick="sortTable('table1', 14)"><strong>PA</strong></th>
+              <th onclick="sortTable('table1', 15)"><strong>PT</strong></th>
+              <th onclick="sortTable('table1', 16)"><strong>avg. w/o P</strong></th>
             </tr>
           </thead>
           <tbody>
+            <!-- Row order sorted descending by "avg. w/o P" -->
             <tr>
+              <td>1</td>
               <td style="text-align: left">Gemini-1.5-Pro</td>
               <td>-</td>
               <td>128</td>
@@ -541,6 +545,7 @@
               <td>27.46</td>
             </tr>
             <tr>
+              <td>2</td>
               <td style="text-align: left">GPT-4o</td>
               <td>-</td>
               <td>50</td>
@@ -559,312 +564,7 @@
               <td>20.96</td>
             </tr>
             <tr>
-              <td style="text-align: left">VideoChatGPT</td>
-              <td style="text-align: left">LLaMA-7B</td>
-              <td>100</td>
-              <td>35.33</td>
-              <td>4.7</td>
-              <td>1.87</td>
-              <td>3.33</td>
-              <td>33.50</td>
-              <td>18.00</td>
-              <td>3.11</td>
-              <td>0.51</td>
-              <td>3.00</td>
-              <td>3.50</td>
-              <td>✗</td>
-              <td>✗</td>
-              <td>10.83</td>
-            </tr>
-            <tr>
-              <td style="text-align: left">VideoChat2</td>
-              <td style="text-align: left">Vicuna-7B</td>
-              <td>8</td>
-              <td>19.67</td>
-              <td>2.37</td>
-              <td>0.93</td>
-              <td>2.33</td>
-              <td>27.50</td>
-              <td>16.33</td>
-              <td>3.81</td>
-              <td>0.51</td>
-              <td>2.67</td>
-              <td>1.00</td>
-              <td>✗</td>
-              <td>✗</td>
-              <td>8.38</td>
-            </tr>
-            <tr>
-              <td style="text-align: left">Video-LLaVA</td>
-              <td style="text-align: left">Vicuna-7B</td>
-              <td>8</td>
-              <td>32.00</td>
-              <td>1.69</td>
-              <td>0.00</td>
-              <td>1.67</td>
-              <td>28.00</td>
-              <td>22.67</td>
-              <td>5.19</td>
-              <td>1.02</td>
-              <td>3.33</td>
-              <td>2.50</td>
-              <td>✗</td>
-              <td>✗</td>
-              <td>8.88</td>
-            </tr>
-            <tr>
-              <td style="text-align: left">LLaMA-VID</td>
-              <td style="text-align: left">Vicuna-7B</td>
-              <td>128</td>
-              <td>29.67</td>
-              <td>2.38</td>
-              <td>0.00</td>
-              <td>2.33</td>
-              <td>29.00</td>
-              <td>21.33</td>
-              <td>3.80</td>
-              <td>0.51</td>
-              <td>2.67</td>
-              <td>7.50</td>
-              <td>✗</td>
-              <td>✗</td>
-              <td>10.38</td>
-            </tr>
-            <tr>
-              <td style="text-align: left">MiniGPT4-Video</td>
-              <td style="text-align: left">Mistral-7B</td>
-              <td>45</td>
-              <td>25.00</td>
-              <td>4.75</td>
-              <td>1.87</td>
-              <td>4.00</td>
-              <td>23.00</td>
-              <td>12.67</td>
-              <td>2.08</td>
-              <td>0.51</td>
-              <td>1.67</td>
-              <td>3.00</td>
-              <td>✗</td>
-              <td>✗</td>
-              <td>7.92</td>
-            </tr>
-            <tr>
-              <td style="text-align: left">PLLaVA</td>
-              <td style="text-align: left">Vicuna-7B</td>
-              <td>16</td>
-              <td>37.33</td>
-              <td>3.73</td>
-              <td>0.93</td>
-              <td>3.33</td>
-              <td>30.00</td>
-              <td>21.00</td>
-              <td>3.46</td>
-              <td>0.00</td>
-              <td>1.33</td>
-              <td>3.00</td>
-              <td>✗</td>
-              <td>✗</td>
-              <td>9.41</td>
-            </tr>
-            <tr>
-              <td style="text-align: left">LLaVA-NeXT-Video</td>
-              <td style="text-align: left">Vicuna-7B</td>
-              <td>32</td>
-              <td>30.33</td>
-              <td>2.37</td>
-              <td>0.93</td>
-              <td>3.00</td>
-              <td>30.50</td>
-              <td>17.00</td>
-              <td>2.08</td>
-              <td>0.51</td>
-              <td>2.00</td>
-              <td>1.50</td>
-              <td>✗</td>
-              <td>✗</td>
-              <td>9.25</td>
-            </tr>
-            <tr>
-              <td style="text-align: left">ShareGPT4Video</td>
-              <td style="text-align: left">Llama3-8B</td>
-              <td>16</td>
-              <td>34.00</td>
-              <td>2.03</td>
-              <td>0.93</td>
-              <td>2.00</td>
-              <td>29.00</td>
-              <td>20.33</td>
-              <td>3.46</td>
-              <td>0.00</td>
-              <td>2.00</td>
-              <td>4.50</td>
-              <td>✗</td>
-              <td>✗</td>
-              <td>9.38</td>
-            </tr>
-            <tr>
-              <td style="text-align: left">LLaMA-VID-13B</td>
-              <td style="text-align: left">Vicuna-13B</td>
-              <td>128</td>
-              <td>33.33</td>
-              <td>2.03</td>
-              <td>0.00</td>
-              <td>1.33</td>
-              <td>30.50</td>
-              <td>22.67</td>
-              <td>3.46</td>
-              <td>0.51</td>
-              <td>3.33</td>
-              <td>8.50</td>
-              <td>✗</td>
-              <td>✗</td>
-              <td>10.91</td>
-            </tr>
-            <tr>
-              <td style="text-align: left">PLLaVA-13B</td>
-              <td style="text-align: left">Vicuna-13B</td>
-              <td>16</td>
-              <td>41.33</td>
-              <td>3.39</td>
-              <td>0.00</td>
-              <td>2.67</td>
-              <td>25.00</td>
-              <td>25.67</td>
-              <td>5.54</td>
-              <td>2.04</td>
-              <td>4.33</td>
-              <td>6.50</td>
-              <td>✗</td>
-              <td>✗</td>
-              <td>9.62</td>
-            </tr>
-            <tr>
-              <td style="text-align: left">PLLaVA-34B</td>
-              <td style="text-align: left">Yi-34B</td>
-              <td>16</td>
-              <td>29.00</td>
-              <td>4.07</td>
-              <td>0.00</td>
-              <td>3.67</td>
-              <td>28.50</td>
-              <td>18.67</td>
-              <td>4.50</td>
-              <td>0.00</td>
-              <td>3.00</td>
-              <td>5.00</td>
-              <td>✗</td>
-              <td>✗</td>
-              <td>10.04</td>
-            </tr>
-            <tr>
-              <td style="text-align: left">LLaVA-NeXT-Video-34B</td>
-              <td style="text-align: left">Yi-34B</td>
-              <td>32</td>
-              <td>30.33</td>
-              <td>2.71</td>
-              <td>0.00</td>
-              <td>2.67</td>
-              <td>32.50</td>
-              <td>14.67</td>
-              <td>2.08</td>
-              <td>0.51</td>
-              <td>1.67</td>
-              <td>1.50</td>
-              <td>✗</td>
-              <td>✗</td>
-              <td>9.59</td>
-            </tr>
-            <tr>
-              <td style="text-align: left">LongVA</td>
-              <td style="text-align: left">Qwen2-7B</td>
-              <td>32</td>
-              <td>33.33</td>
-              <td>4.07</td>
-              <td>0.00</td>
-              <td>3.33</td>
-              <td>37.50</td>
-              <td>33.33</td>
-              <td>4.07</td>
-              <td>0.00</td>
-              <td>2.33</td>
-              <td>3.00</td>
-              <td>✗</td>
-              <td>✗</td>
-              <td>11.54</td>
-            </tr>
-            <tr>
-              <td style="text-align: left">LongVILA</td>
-              <td style="text-align: left">Llama3-8B</td>
-              <td>128</td>
-              <td>39.00</td>
-              <td>4.41</td>
-              <td>0.93</td>
-              <td>4.33</td>
-              <td>39.50</td>
-              <td>39.00</td>
-              <td>4.41</td>
-              <td>0.93</td>
-              <td>3.00</td>
-              <td>10.00</td>
-              <td>✗</td>
-              <td>✗</td>
-              <td>14.21</td>
-            </tr>
-            <tr>
-              <td style="text-align: left">LongLLaVA</td>
-              <td style="text-align: left">Jamba-9B</td>
-              <td>128</td>
-              <td>36.33</td>
-              <td>3.73</td>
-              <td>0.00</td>
-              <td>3.33</td>
-              <td>29.00</td>
-              <td>36.33</td>
-              <td>3.73</td>
-              <td>0.00</td>
-              <td>3.67</td>
-              <td>10.00</td>
-              <td>✗</td>
-              <td>✗</td>
-              <td>11.50</td>
-            </tr>
-            <tr>
-              <td style="text-align: left">VideoLLM-online</td>
-              <td style="text-align: left">Llama3-8B</td>
-              <td>1 fps</td>
-              <td>18.00</td>
-              <td>4.75</td>
-              <td>0.00</td>
-              <td>4.67</td>
-              <td>35.00</td>
-              <td>18.00</td>
-              <td>4.75</td>
-              <td>0.00</td>
-              <td>1.33</td>
-              <td>0.00</td>
-              <td>✗</td>
-              <td>✗</td>
-              <td>10.25</td>
-            </tr>
-            <tr>
-              <td style="text-align: left">VideoLLaMB</td>
-              <td style="text-align: left">Vicuna-7B</td>
-              <td>32 / 1 fps</td>
-              <td>32.67</td>
-              <td>2.71</td>
-              <td>0.00</td>
-              <td>2.33</td>
-              <td>29.50</td>
-              <td>32.67</td>
-              <td>2.71</td>
-              <td>0.00</td>
-              <td>3.00</td>
-              <td>3.00</td>
-              <td>✗</td>
-              <td>✗</td>
-              <td>9.46</td>
-            </tr>
-            <tr>
+              <td>3</td>
               <td style="text-align: left">IXC2.5-OL</td>
               <td style="text-align: left">Qwen2-1.5B</td>
               <td>512</td>
@@ -883,6 +583,26 @@
               <td>15.04</td>
             </tr>
             <tr>
+              <td>4</td>
+              <td style="text-align: left">LongVILA</td>
+              <td style="text-align: left">Llama3-8B</td>
+              <td>128</td>
+              <td>39.00</td>
+              <td>4.41</td>
+              <td>0.93</td>
+              <td>4.33</td>
+              <td>39.50</td>
+              <td>39.00</td>
+              <td>4.41</td>
+              <td>0.93</td>
+              <td>3.00</td>
+              <td>10.00</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td>14.21</td>
+            </tr>
+            <tr>
+              <td>5</td>
               <td style="text-align: left"><strong>M4</strong></td>
               <td style="text-align: left">Qwen2-7B</td>
               <td>32 / 1 fps</td>
@@ -900,7 +620,310 @@
               <td>62.00</td>
               <td>12.46</td>
             </tr>
-            <!-- Add more rows as needed -->
+            <tr>
+              <td>6</td>
+              <td style="text-align: left">LongVA</td>
+              <td style="text-align: left">Qwen2-7B</td>
+              <td>32</td>
+              <td>33.33</td>
+              <td>4.07</td>
+              <td>0.00</td>
+              <td>3.33</td>
+              <td>37.50</td>
+              <td>33.33</td>
+              <td>4.07</td>
+              <td>0.00</td>
+              <td>2.33</td>
+              <td>3.00</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td>11.54</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td style="text-align: left">LongLLaVA</td>
+              <td style="text-align: left">Jamba-9B</td>
+              <td>128</td>
+              <td>36.33</td>
+              <td>3.73</td>
+              <td>0.00</td>
+              <td>3.33</td>
+              <td>29.00</td>
+              <td>36.33</td>
+              <td>3.73</td>
+              <td>0.00</td>
+              <td>3.67</td>
+              <td>10.00</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td>11.50</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td style="text-align: left">LLaMA-VID-13B</td>
+              <td style="text-align: left">Vicuna-13B</td>
+              <td>128</td>
+              <td>33.33</td>
+              <td>2.03</td>
+              <td>0.00</td>
+              <td>1.33</td>
+              <td>30.50</td>
+              <td>22.67</td>
+              <td>3.46</td>
+              <td>0.51</td>
+              <td>3.33</td>
+              <td>8.50</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td>10.91</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td style="text-align: left">VideoChatGPT</td>
+              <td style="text-align: left">LLaMA-7B</td>
+              <td>100</td>
+              <td>35.33</td>
+              <td>4.7</td>
+              <td>1.87</td>
+              <td>3.33</td>
+              <td>33.50</td>
+              <td>18.00</td>
+              <td>3.11</td>
+              <td>0.51</td>
+              <td>3.00</td>
+              <td>3.50</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td>10.83</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td style="text-align: left">LLaMA-VID</td>
+              <td style="text-align: left">Vicuna-7B</td>
+              <td>128</td>
+              <td>29.67</td>
+              <td>2.38</td>
+              <td>0.00</td>
+              <td>2.33</td>
+              <td>29.00</td>
+              <td>21.33</td>
+              <td>3.80</td>
+              <td>0.51</td>
+              <td>2.67</td>
+              <td>7.50</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td>10.38</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td style="text-align: left">VideoLLM-online</td>
+              <td style="text-align: left">Llama3-8B</td>
+              <td>1 fps</td>
+              <td>18.00</td>
+              <td>4.75</td>
+              <td>0.00</td>
+              <td>4.67</td>
+              <td>35.00</td>
+              <td>18.00</td>
+              <td>4.75</td>
+              <td>0.00</td>
+              <td>1.33</td>
+              <td>0.00</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td>10.25</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td style="text-align: left">PLLaVA-34B</td>
+              <td style="text-align: left">Yi-34B</td>
+              <td>16</td>
+              <td>29.00</td>
+              <td>4.07</td>
+              <td>0.00</td>
+              <td>3.67</td>
+              <td>28.50</td>
+              <td>18.67</td>
+              <td>4.50</td>
+              <td>0.00</td>
+              <td>3.00</td>
+              <td>5.00</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td>10.04</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td style="text-align: left">PLLaVA-13B</td>
+              <td style="text-align: left">Vicuna-13B</td>
+              <td>16</td>
+              <td>41.33</td>
+              <td>3.39</td>
+              <td>0.00</td>
+              <td>2.67</td>
+              <td>25.00</td>
+              <td>25.67</td>
+              <td>5.54</td>
+              <td>2.04</td>
+              <td>4.33</td>
+              <td>6.50</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td>9.62</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td style="text-align: left">LLaVA-NeXT-Video-34B</td>
+              <td style="text-align: left">Yi-34B</td>
+              <td>32</td>
+              <td>30.33</td>
+              <td>2.71</td>
+              <td>0.00</td>
+              <td>2.67</td>
+              <td>32.50</td>
+              <td>14.67</td>
+              <td>2.08</td>
+              <td>0.51</td>
+              <td>1.67</td>
+              <td>1.50</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td>9.59</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td style="text-align: left">VideoLLaMB</td>
+              <td style="text-align: left">Vicuna-7B</td>
+              <td>32 / 1 fps</td>
+              <td>32.67</td>
+              <td>2.71</td>
+              <td>0.00</td>
+              <td>2.33</td>
+              <td>29.50</td>
+              <td>32.67</td>
+              <td>2.71</td>
+              <td>0.00</td>
+              <td>3.00</td>
+              <td>3.00</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td>9.46</td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td style="text-align: left">PLLaVA</td>
+              <td style="text-align: left">Vicuna-7B</td>
+              <td>16</td>
+              <td>37.33</td>
+              <td>3.73</td>
+              <td>0.93</td>
+              <td>3.33</td>
+              <td>30.00</td>
+              <td>21.00</td>
+              <td>3.46</td>
+              <td>0.00</td>
+              <td>1.33</td>
+              <td>3.00</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td>9.41</td>
+            </tr>
+            <tr>
+              <td>17</td>
+              <td style="text-align: left">ShareGPT4Video</td>
+              <td style="text-align: left">Llama3-8B</td>
+              <td>16</td>
+              <td>34.00</td>
+              <td>2.03</td>
+              <td>0.93</td>
+              <td>2.00</td>
+              <td>29.00</td>
+              <td>20.33</td>
+              <td>3.46</td>
+              <td>0.00</td>
+              <td>2.00</td>
+              <td>4.50</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td>9.38</td>
+            </tr>
+            <tr>
+              <td>18</td>
+              <td style="text-align: left">LLaVA-NeXT-Video</td>
+              <td style="text-align: left">Vicuna-7B</td>
+              <td>32</td>
+              <td>30.33</td>
+              <td>2.37</td>
+              <td>0.93</td>
+              <td>3.00</td>
+              <td>30.50</td>
+              <td>17.00</td>
+              <td>2.08</td>
+              <td>0.51</td>
+              <td>2.00</td>
+              <td>1.50</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td>9.25</td>
+            </tr>
+            <tr>
+              <td>19</td>
+              <td style="text-align: left">Video-LLaVA</td>
+              <td style="text-align: left">Vicuna-7B</td>
+              <td>8</td>
+              <td>32.00</td>
+              <td>1.69</td>
+              <td>0.00</td>
+              <td>1.67</td>
+              <td>28.00</td>
+              <td>22.67</td>
+              <td>5.19</td>
+              <td>1.02</td>
+              <td>3.33</td>
+              <td>2.50</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td>8.88</td>
+            </tr>
+            <tr>
+              <td>20</td>
+              <td style="text-align: left">VideoChat2</td>
+              <td style="text-align: left">Vicuna-7B</td>
+              <td>8</td>
+              <td>19.67</td>
+              <td>2.37</td>
+              <td>0.93</td>
+              <td>2.33</td>
+              <td>27.50</td>
+              <td>16.33</td>
+              <td>3.81</td>
+              <td>0.51</td>
+              <td>2.67</td>
+              <td>1.00</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td>8.38</td>
+            </tr>
+            <tr>
+              <td>21</td>
+              <td style="text-align: left">MiniGPT4-Video</td>
+              <td style="text-align: left">Mistral-7B</td>
+              <td>45</td>
+              <td>25.00</td>
+              <td>4.75</td>
+              <td>1.87</td>
+              <td>4.00</td>
+              <td>23.00</td>
+              <td>12.67</td>
+              <td>2.08</td>
+              <td>0.51</td>
+              <td>1.67</td>
+              <td>3.00</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td>7.92</td>
+            </tr>
           </tbody>
         </table>
         <p><span class="dnerf">Table 1.</span> <b>Performance comparison of existing VideoLLM on OmniMMI</b>.  The 1st, 2nd, 3rd of <b>SG</b> and <b>MD</b> tasks represent the cumulative accuracy up to and including these stages. The 'avg.' indicates average accuracy across all data points. 'w/o P.' indicates the overall score across all subtasks except for the proactive task</p>
@@ -910,12 +933,13 @@
       </div>
     </div>
   </section>
-
+  
 
 
   <section class="section" style="background-color:#efeff081">
     <div class="container">
       <h2 class="title is-3 has-text-centered" id="results-lolm-on-omnimmi">Leaderboard of Large Omni Language Model on OmniMMI</h2>
+      <h3 class="title is-6 has-text-centered" id="results-contact">Submit Your Results: wangyuxuan1@bigai.ai</h3>
       <div class="table-container has-text-centered" style="font-size:15px">
         <p style="text-align: center; margin-bottom: 20px;">
           The leaderboard is ranked by the average score without proactive tasks (avg. w/o P), reflecting the average score across four tasks: SG, AP, MD, and SI. You can click on the task bar to view the rank for a specific subtask.
@@ -923,26 +947,28 @@
         <table class="table is-fullwidth is-narrow is-hoverable" id="table2">
           <thead>
             <tr>
-              <th style="text-align: left" onclick="sortTable('table2', 0)"><strong>Models</strong></th>
-              <th style="text-align: center" onclick="sortTable('table2', 1)"><strong>LLM</strong></th>
-              <th style="text-align: center" onclick="sortTable('table2', 2)"><strong>Num Frames</strong></th>
-              <th onclick="sortTable('table2', 3)"><strong>SG 1st</strong></th>
-              <th onclick="sortTable('table2', 4)"><strong>SG 2nd</strong></th>
-              <th onclick="sortTable('table2', 5)"><strong>SG 3rd</strong></th>
-              <th onclick="sortTable('table2', 6)"><strong>SG avg.</strong></th>
-              <th onclick="sortTable('table2', 7)"><strong>AP</strong></th>
-              <th onclick="sortTable('table2', 8)"><strong>MD 1st</strong></th>
-              <th onclick="sortTable('table2', 9)"><strong>MD 2nd</strong></th>
-              <th onclick="sortTable('table2', 10)"><strong>MD 3rd</strong></th>
-              <th onclick="sortTable('table2', 11)"><strong>MD avg.</strong></th>
-              <th onclick="sortTable('table2', 12)"><strong>SI</strong></th>
-              <th onclick="sortTable('table2', 13)"><strong>PA</strong></th>
-              <th onclick="sortTable('table2', 14)"><strong>PT</strong></th>
-              <th onclick="sortTable('table2', 15)"><strong>avg. w/o P</strong></th>
+              <th style="text-align: center"><strong>Rank</strong></th>
+              <th style="text-align: left" onclick="sortTable('table2', 1)"><strong>Models</strong></th>
+              <th style="text-align: center" onclick="sortTable('table2', 2)"><strong>LLM</strong></th>
+              <th style="text-align: center" onclick="sortTable('table2', 3)"><strong>Num Frames</strong></th>
+              <th onclick="sortTable('table2', 4)"><strong>SG 1st</strong></th>
+              <th onclick="sortTable('table2', 5)"><strong>SG 2nd</strong></th>
+              <th onclick="sortTable('table2', 6)"><strong>SG 3rd</strong></th>
+              <th onclick="sortTable('table2', 7)"><strong>SG avg.</strong></th>
+              <th onclick="sortTable('table2', 8)"><strong>AP</strong></th>
+              <th onclick="sortTable('table2', 9)"><strong>MD 1st</strong></th>
+              <th onclick="sortTable('table2', 10)"><strong>MD 2nd</strong></th>
+              <th onclick="sortTable('table2', 11)"><strong>MD 3rd</strong></th>
+              <th onclick="sortTable('table2', 12)"><strong>MD avg.</strong></th>
+              <th onclick="sortTable('table2', 13)"><strong>SI</strong></th>
+              <th onclick="sortTable('table2', 14)"><strong>PA</strong></th>
+              <th onclick="sortTable('table2', 15)"><strong>PT</strong></th>
+              <th onclick="sortTable('table2', 16)"><strong>avg. w/o P</strong></th>
             </tr>
           </thead>
           <tbody>
             <tr>
+              <td style="text-align: center">1</td>
               <td style="text-align: left">VideoLLaMA2</td>
               <td style="text-align: left">Qwen2-7B</td>
               <td>8</td>
@@ -961,6 +987,7 @@
               <td>13.33</td>
             </tr>
             <tr>
+              <td style="text-align: center">2</td>
               <td style="text-align: left">VITA</td>
               <td style="text-align: left">Mistrl-8×7B</td>
               <td>16</td>
@@ -979,24 +1006,7 @@
               <td>10.62</td>
             </tr>
             <tr>
-              <td style="text-align: left">MiniOmini2</td>
-              <td style="text-align: left">Qwen2-0.5B</td>
-              <td>1</td>
-              <td>17.00</td>
-              <td>5.08</td>
-              <td>0.93</td>
-              <td>4.67</td>
-              <td>14.00</td>
-              <td>6.00</td>
-              <td>1.00</td>
-              <td>0.00</td>
-              <td>1.00</td>
-              <td>1.00</td>
-              <td>✗</td>
-              <td>✗</td>
-              <td>5.17</td>
-            </tr>
-            <tr>
+              <td style="text-align: center">3</td>
               <td style="text-align: left"><strong>M4-audio</strong></td>
               <td style="text-align: left">Qwen2-7B</td>
               <td>32 / 1 fps</td>
@@ -1014,7 +1024,25 @@
               <td>68.50</td>
               <td>6.38</td>
             </tr>
-            <!-- Add more rows as needed -->
+            <tr>
+              <td style="text-align: center">4</td>
+              <td style="text-align: left">MiniOmini2</td>
+              <td style="text-align: left">Qwen2-0.5B</td>
+              <td>1</td>
+              <td>17.00</td>
+              <td>5.08</td>
+              <td>0.93</td>
+              <td>4.67</td>
+              <td>14.00</td>
+              <td>6.00</td>
+              <td>1.00</td>
+              <td>0.00</td>
+              <td>1.00</td>
+              <td>1.00</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td>5.17</td>
+            </tr>
           </tbody>
         </table>
         <p><span class="dnerf">Table 2.</span> <b>Performance comparison of existing OmniLLM on OmniMMI</b>.  
@@ -1028,6 +1056,7 @@
       </div>
     </div>
   </section>
+
 
   <!-- <section class="section">
     <div class="container">
