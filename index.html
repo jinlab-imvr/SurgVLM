@@ -947,7 +947,7 @@
         <table class="table is-fullwidth is-narrow is-hoverable" id="table2">
           <thead>
             <tr>
-              <th style="text-align: center"><strong>Rank</strong></th>
+              <th style="text-align: center" onclick="sortTable('table1', 0)"><strong>Rank</strong></th>
               <th style="text-align: left" onclick="sortTable('table2', 1)"><strong>Models</strong></th>
               <th style="text-align: center" onclick="sortTable('table2', 2)"><strong>LLM</strong></th>
               <th style="text-align: center" onclick="sortTable('table2', 3)"><strong>Num Frames</strong></th>
@@ -1353,8 +1353,8 @@
     }
   
     window.onload = function() {
-      sortTable('table1', 15); // Automatically sort the first table by the first column
-      sortTable('table2', 15); // Automatically sort the second table by the first column
+      sortTable('table1', 16); // Automatically sort the first table by the first column
+      sortTable('table2', 16); // Automatically sort the second table by the first column
     };
   </script>
   
