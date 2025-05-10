@@ -1,0 +1,18 @@
+title: SurgX
+description: "SurgX: Large Vision-Language Model for Surgical Intelligence"
+baseurl: "/SurgX.github.io"
+url: "https://jinlab-imvr.github.io"
+
+# Build settings
+markdown: kramdown
+theme: jekyll-theme-minimal
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - .git/
+  - .github/
+  - node_modules/
+  - vendor/ 
