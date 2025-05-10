@@ -451,7 +451,7 @@
           
             <div class="column is-four-fifths">
               <figure class="image">
-                    <img src="/assets/img/Figure1.png" />
+                    <img src="/assets/img/new_Figure1.png" />
                     <!-- <figcaption><span class="dnerf">Figure 1.</span> <b>An overview of OmniMMI.</b> </figcaption> -->
               </figure>
               </div>
@@ -460,47 +460,6 @@
           <figcaption style="padding-top:10px; text-align: left;"><span class="dnerf">Figure 1.</span>
             <b>a</b>, SurgX-MMD contains 16 surgical procedures and 15 anatomical structures, reflecting the broad applicability of SurgX.
             <b>b</b>, SurgX-MMD contain 1.181M annotated images in 849 long-term surgical videos, and the distribution demonstrate large-scale comprehensive data in diverse surgical procedures, ensuring the robustness of SurgX.</figcaption>
-          
-              </div>
-            </div>
-          </section>
-
-          <section class="hero teaser">
-            <div class="container is-max-desktop">
-              <div class="hero-body">
-          <div class="columns is-centered has-text-centered">
-          
-            <div class="column is-four-fifths">
-              <figure class="image">
-                    <img src="/assets/img/Figure2.png" />
-              </figure>
-              <figcaption style="padding-top:10px; text-align: left;"><span class="dnerf">Figure 2.</span>
-            <b>a</b>, The data pipeline of SurgX-MMD can be divided into three stages including data cleaning \& refinement, contextual enhancement, and augmentation \& diversification.
-            <b>b</b>, Overview of task hierarchy in SurgX-MMD containing 10 surgical tasks, ranging from visual perception to scene understanding and decision-making. Tasks are organized based on increasing contextual dependency, task complexity, and clinical impact.
-            <b>c</b>, The comparison shows SurgX-MMD is an advanced surgical multimodal dataset with largest number of image, annotation, and surgical procedures indicated by the size of bubble.
-            <b>d</b>, 7.79 million samples distribution of SurgX-MMD according to 3 intelligence-level and 10 surgical tasks.</figcaption>
-              </div>
-          </div>
-          
-              </div>
-            </div>
-          </section>
-
-          <section class="hero teaser">
-            <div class="container is-max-desktop">
-              <div class="hero-body">
-          <div class="columns is-centered has-text-centered">
-          
-            <div class="column is-four-fifths">
-              <figure class="image">
-                    <img src="/assets/img/Figure3.png" />
-              </figure>
-              <figcaption style="padding-top:10px; text-align: left;"><span class="dnerf">Figure 3.</span> 
-            <b>a</b>, Leaderboard of VLMs on SurgX-MMBench, demostrating superior performance of SurgX compared with general-purpose VLMs.
-            <b>b</b>, Comprehensive comparison with Gemini 2.0 Flash, Qwen2.5 Max, and GPT-4o. SurgX consistently outperforms commercial VLMs across 24 metrics.
-            <b>c</b>, Detailed comparison with 16 general-purpose VLMs on the most important metrics across six surgical tasks. All SurgX models achieve state-of-the-art performance.</figcaption>
-              </div>
-          </div>
           
               </div>
             </div>
@@ -561,7 +520,7 @@
           Building upon this comprehensive dataset, we propose SurgX, which is built upon Qwen2.5, and undergoes multimodal projector pretraining to align visual-text representations, followed by instruction tuning to specific surgical tasks. To evaluate the performance of SurgX and general-purpose vision-language models, we construct a surgical multimodal benchmark for vision-language models, SurgX-MMBench, across 6 distinct surgical tasks. We conduct comprehensive evaluations on 16 general-purpose vision-language models (e.g., GPT-4o, Gemini 2.0 Flash, Qwen2.5-Max) and 3 SurgX models including SurgX-7B, SurgX-32B, and SurgX-72B.
           Comprehensive evaluations show that the proposed SurgX consistently surpasses state-of-the-art general-purpose vision-language models.
           SurgX achieves 75.4% improvement on arena score, 96.5% improvement on phase recognition, 87.7% on action recognition, 608.1% on triplet prediction, 59.4% on visual question answering, 198.5% on instrument localization, and 28.9% on critical view safety detection compared with Gemini 2.0 Flash.
-          Beyond raw gains, SurgX demonstrates robust generalization and open‑vocabulary QA, establishing a scalable, accurate, and clinically reliable paradigm for unified surgical intelligence. Model weights, dataset, benchmark, and code can be found in <a href="https://ai-in-surgery.github.io">https://ai-in-surgery.github.io</a>.
+          Beyond raw gains, SurgX demonstrates robust generalization and open‑vocabulary QA, establishing a scalable, accurate, and clinically reliable paradigm for unified surgical intelligence.
         </p>
         <p>✨ <strong>Highlights:</strong></p>
         <ol class="highlights-list">
@@ -605,6 +564,47 @@
             If you're interested in the M4 model, check the introduction 
             <a href="https://omnimmi.github.io/m4.html" class="link">here</a>.
         </p> -->
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+  <div class="columns is-centered has-text-centered">
+  
+    <div class="column is-four-fifths">
+      <figure class="image">
+            <img src="/assets/img/Figure2.png" />
+      </figure>
+      <figcaption style="padding-top:10px; text-align: left;"><span class="dnerf">Figure 2.</span>
+    <b>a</b>, The data pipeline of SurgX-MMD can be divided into three stages including data cleaning \& refinement, contextual enhancement, and augmentation \& diversification.
+    <b>b</b>, Overview of task hierarchy in SurgX-MMD containing 10 surgical tasks, ranging from visual perception to scene understanding and decision-making. Tasks are organized based on increasing contextual dependency, task complexity, and clinical impact.
+    <b>c</b>, The comparison shows SurgX-MMD is an advanced surgical multimodal dataset with largest number of image, annotation, and surgical procedures indicated by the size of bubble.
+    <b>d</b>, 7.79 million samples distribution of SurgX-MMD according to 3 intelligence-level and 10 surgical tasks.</figcaption>
+      </div>
+  </div>
+  
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+  <div class="columns is-centered has-text-centered">
+  
+    <div class="column is-four-fifths">
+      <figure class="image">
+            <img src="/assets/img/Figure3.png" />
+      </figure>
+      <figcaption style="padding-top:10px; text-align: left;"><span class="dnerf">Figure 3.</span> 
+    <b>a</b>, Leaderboard of VLMs on SurgX-MMBench, demostrating superior performance of SurgX compared with general-purpose VLMs.
+    <b>b</b>, Comprehensive comparison with Gemini 2.0 Flash, Qwen2.5 Max, and GPT-4o. SurgX consistently outperforms commercial VLMs across 24 metrics.
+    <b>c</b>, Detailed comparison with 16 general-purpose VLMs on the most important metrics across six surgical tasks. All SurgX models achieve state-of-the-art performance.</figcaption>
+      </div>
+  </div>
+  
+      </div>
     </div>
   </section>
 
