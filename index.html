@@ -514,18 +514,18 @@
     <div class="container is-max-desktop">
         <h2 class="title has-text-centered" id="abstract">Abstract</h2>
         <p>
-          Foundation models have achieved transformative success across biomedical domains by enabling holistic understanding of multimodal data. However, their application in surgery remains underexplored. Surgical intelligence presents unique challenges - requiring surgical visual perception, scene understanding, and decision-making. Existing general-purpose vision-language models fail to address these needs due to insufficient domain-specific supervision and the lack of high-quality surgical datasets. To bridge this gap, we propose SurgX, one of the first surgical foundation model, which is a large vision-language model for surgical intelligence. 
-          To enable this, we construct a large-scale multimodal surgical dataset, SurgX-MMD, comprising over 1.81 million frames with 7.79 million annotations, spanning more than 16 surgical procedures and 15 anatomical structures. 
+          Foundation models have achieved transformative success across biomedical domains by enabling holistic understanding of multimodal data. However, their application in surgery remains underexplored. Surgical intelligence presents unique challenges - requiring surgical visual perception, scene understanding, and decision-making. Existing general-purpose vision-language models fail to address these needs due to insufficient domain-specific supervision and the lack of high-quality surgical datasets. To bridge this gap, we propose SurgVLM, one of the first surgical foundation model, which is a large vision-language model for surgical intelligence. 
+          To enable this, we construct a large-scale multimodal surgical dataset, SurgVLM-DB, comprising over 1.81 million frames with 7.79 million annotations, spanning more than 16 surgical procedures and 15 anatomical structures. 
           We unify and reorganize 20+ public datasets across 10+ surgical tasks, followed by standardizing labels and doing hierarchical instruction alignment to facilitate comprehensive surgical tasks from visual perception, scene understanding and decision-making.
-          Building upon this comprehensive dataset, we propose SurgX, which is built upon Qwen2.5, and undergoes multimodal projector pretraining to align visual-text representations, followed by instruction tuning to specific surgical tasks. To evaluate the performance of SurgX and general-purpose vision-language models, we construct a surgical multimodal benchmark for vision-language models, SurgX-MMBench, across 6 distinct surgical tasks. We conduct comprehensive evaluations on 16 general-purpose vision-language models (e.g., GPT-4o, Gemini 2.0 Flash, Qwen2.5-Max) and 3 SurgX models including SurgX-7B, SurgX-32B, and SurgX-72B.
-          Comprehensive evaluations show that the proposed SurgX consistently surpasses state-of-the-art general-purpose vision-language models.
-          SurgX achieves 75.4% improvement on arena score, 96.5% improvement on phase recognition, 87.7% on action recognition, 608.1% on triplet prediction, 59.4% on visual question answering, 198.5% on instrument localization, and 28.9% on critical view safety detection compared with Gemini 2.0 Flash.
-          Beyond raw gains, SurgX demonstrates robust generalization and open‑vocabulary QA, establishing a scalable, accurate, and clinically reliable paradigm for unified surgical intelligence.
+          Building upon this comprehensive dataset, we propose SurgVLM, which is built upon Qwen2.5, and undergoes multimodal projector pretraining to align visual-text representations, followed by instruction tuning to specific surgical tasks. To evaluate the performance of SurgVLM and general-purpose vision-language models, we construct a surgical multimodal benchmark for vision-language models, SurgVLM-Bench, across 6 distinct surgical tasks. We conduct comprehensive evaluations on 16 general-purpose vision-language models (e.g., GPT-4o, Gemini 2.0 Flash, Qwen2.5-Max) and 3 SurgVLM models including SurgVLM-7B, SurgVLM-32B, and SurgVLM-72B.
+          Comprehensive evaluations show that the proposed SurgVLM consistently surpasses state-of-the-art general-purpose vision-language models.
+          SurgVLM achieves 75.4% improvement on arena score, 96.5% improvement on phase recognition, 87.7% on action recognition, 608.1% on triplet prediction, 59.4% on visual question answering, 198.5% on instrument localization, and 28.9% on critical view safety detection compared with Gemini 2.0 Flash.
+          Beyond raw gains, SurgVLM demonstrates robust generalization and open‑vocabulary QA, establishing a scalable, accurate, and clinically reliable paradigm for unified surgical intelligence.
         </p>
         <p>✨ <strong>Highlights:</strong></p>
         <ol class="highlights-list">
             <li>
-                <p><strong>SurgX-MMD: A Large-scale Surgical Multimodal Database</strong></p>
+                <p><strong>SurgVLM-DB: A Large-scale Surgical Multimodal Database</strong></p>
                 <!-- <ul>
                     <li>
                         <p><strong>Streaming Temporal State Awareness:</strong> This requires understanding current and historical video states without future context, challenging tasks like action prediction, state grounding, and multi-turn dependencies.</p>
@@ -537,7 +537,7 @@
             </li>
             
             <li>
-              <p><strong>SurgX-MMBench: A Comprehensive Surgical Benchmarks for VLMs</strong></p>
+              <p><strong>SurgVLM-Bench: A Comprehensive Surgical Benchmarks for VLMs</strong></p>
               <!-- <ul>
                   <li>
                       <p><strong>Streaming Temporal State Awareness:</strong> This requires understanding current and historical video states without future context, challenging tasks like action prediction, state grounding, and multi-turn dependencies.</p>
@@ -549,7 +549,7 @@
           </li>
 
             <li>
-                <p><strong>SurgX: Large Vision-Language Model for Surgical Intelligence</strong></p>
+                <p><strong>SurgVLM: Large Vision-Language Model for Surgical Intelligence</strong></p>
                 <!-- <ul>
                     <li>
                         <p><strong>M4-IT Dataset:</strong> A synthetic instruction finetuning dataset with components interleaved image-text instruction, noise instruction, and stop instruction.</p>
@@ -577,10 +577,10 @@
             <img src="assets/img/Figure2.png" />
       </figure>
       <figcaption style="padding-top:10px; text-align: left;"><span class="dnerf">Figure 2.</span>
-    <b>a</b>, The data pipeline of SurgX-MMD can be divided into three stages including data cleaning \& refinement, contextual enhancement, and augmentation \& diversification.
-    <b>b</b>, Overview of task hierarchy in SurgX-MMD containing 10 surgical tasks, ranging from visual perception to scene understanding and decision-making. Tasks are organized based on increasing contextual dependency, task complexity, and clinical impact.
-    <b>c</b>, The comparison shows SurgX-MMD is an advanced surgical multimodal dataset with largest number of image, annotation, and surgical procedures indicated by the size of bubble.
-    <b>d</b>, 7.79 million samples distribution of SurgX-MMD according to 3 intelligence-level and 10 surgical tasks.</figcaption>
+    <b>a</b>, The data pipeline of SurgVLM-DB can be divided into three stages including data cleaning \& refinement, contextual enhancement, and augmentation \& diversification.
+    <b>b</b>, Overview of task hierarchy in SurgVLM-DB containing 10 surgical tasks, ranging from visual perception to scene understanding and decision-making. Tasks are organized based on increasing contextual dependency, task complexity, and clinical impact.
+    <b>c</b>, The comparison shows SurgVLM-DB is an advanced surgical multimodal dataset with largest number of image, annotation, and surgical procedures indicated by the size of bubble.
+    <b>d</b>, 7.79 million samples distribution of SurgVLM-DB according to 3 intelligence-level and 10 surgical tasks.</figcaption>
       </div>
   </div>
   
@@ -598,9 +598,9 @@
             <img src="assets/img/Figure3.png" />
       </figure>
       <figcaption style="padding-top:10px; text-align: left;"><span class="dnerf">Figure 3.</span> 
-    <b>a</b>, Leaderboard of VLMs on SurgX-MMBench, demostrating superior performance of SurgX compared with general-purpose VLMs.
-    <b>b</b>, Comprehensive comparison with Gemini 2.0 Flash, Qwen2.5 Max, and GPT-4o. SurgX consistently outperforms commercial VLMs across 24 metrics.
-    <b>c</b>, Detailed comparison with 16 general-purpose VLMs on the most important metrics across six surgical tasks. All SurgX models achieve state-of-the-art performance.</figcaption>
+    <b>a</b>, Leaderboard of VLMs on SurgVLM-Bench, demostrating superior performance of SurgVLM compared with general-purpose VLMs.
+    <b>b</b>, Comprehensive comparison with Gemini 2.0 Flash, Qwen2.5 Max, and GPT-4o. SurgVLM consistently outperforms commercial VLMs across 24 metrics.
+    <b>c</b>, Detailed comparison with 16 general-purpose VLMs on the most important metrics across six surgical tasks. All SurgVLM models achieve state-of-the-art performance.</figcaption>
       </div>
   </div>
   
@@ -610,7 +610,7 @@
 
   <section class="section" style="background-color:#efeff081">
     <div class="container">
-      <h2 class="title is-3 has-text-centered" id="surgical-arena-results">Leaderboard of Vision-Language Models on SurgX-MMBench</h2>
+      <h2 class="title is-3 has-text-centered" id="surgical-arena-results">Leaderboard of Vision-Language Models on SurgVLM-Bench</h2>
       <h3 class="title is-6 has-text-centered" id="results-contact">Submit Your Results: zhitao@nus.edu.sg</h3>
       <div class="table-container has-text-centered" style="font-size:15px">
         <p style="text-align: center; margin-bottom: 20px;">
@@ -633,10 +633,10 @@
             </tr>
           </thead>
           <tbody>
-            <tr style="background-color: #b7e4c7;"><td>1</td><td style="text-align:left;">SurgX-72B Lora-tuning (MCQ)</td><td>MCQ</td><td>336.21</td><td>69.66</td><td>43.1</td><td>12.52</td><td>76.73</td><td>75.2</td><td>59.0</td></tr>
-            <tr style="background-color: #d0edd8;"><td>2</td><td style="text-align:left;">SurgX-72B Lora-tuning (Openset)</td><td>Openset</td><td>331.86</td><td>76.40</td><td>42.9</td><td>13.10</td><td>76.60</td><td>63.46</td><td>59.4</td></tr>
-            <tr><td>3</td><td style="text-align:left;">SurgX-32B Freeze-tuning (Openset)</td><td>Openset</td><td>306.91</td><td>71.20</td><td>40.1</td><td>12.98</td><td>74.51</td><td>59.72</td><td>48.4</td></tr>
-            <tr><td>4</td><td style="text-align:left;">SurgX-7B Full-tuning (Openset)</td><td>Openset</td><td>290.78</td><td>70.30</td><td>45.8</td><td>4.15</td><td>76.86</td><td>59.67</td><td>34.0</td></tr>
+            <tr style="background-color: #b7e4c7;"><td>1</td><td style="text-align:left;">SurgVLM-72B Lora-tuning (MCQ)</td><td>MCQ</td><td>336.21</td><td>69.66</td><td>43.1</td><td>12.52</td><td>76.73</td><td>75.2</td><td>59.0</td></tr>
+            <tr style="background-color: #d0edd8;"><td>2</td><td style="text-align:left;">SurgVLM-72B Lora-tuning (Openset)</td><td>Openset</td><td>331.86</td><td>76.40</td><td>42.9</td><td>13.10</td><td>76.60</td><td>63.46</td><td>59.4</td></tr>
+            <tr><td>3</td><td style="text-align:left;">SurgVLM-32B Freeze-tuning (Openset)</td><td>Openset</td><td>306.91</td><td>71.20</td><td>40.1</td><td>12.98</td><td>74.51</td><td>59.72</td><td>48.4</td></tr>
+            <tr><td>4</td><td style="text-align:left;">SurgVLM-7B Full-tuning (Openset)</td><td>Openset</td><td>290.78</td><td>70.30</td><td>45.8</td><td>4.15</td><td>76.86</td><td>59.67</td><td>34.0</td></tr>
             <tr><td>5</td><td style="text-align:left;">Gemini 2.0 Flash</td><td>MCQ</td><td>191.70</td><td>38.89</td><td>24.4</td><td>1.85</td><td>59.61</td><td>47.05</td><td>19.9</td></tr>
             <tr><td>6</td><td style="text-align:left;">Qwen2.5-VL-72B-Instruct</td><td>MCQ</td><td>184.85</td><td>29.30</td><td>28.2</td><td>1.27</td><td>41.69</td><td>42.19</td><td>42.2</td></tr>
             <tr><td>7</td><td style="text-align:left;">Qwen2.5-VL-32B-Instruct</td><td>MCQ</td><td>184.40</td><td>37.23</td><td>31.8</td><td>0.98</td><td>60.53</td><td>42.46</td><td>11.4</td></tr>
@@ -655,7 +655,7 @@
             <tr><td>20</td><td style="text-align:left;">Skywork-R1V-38B</td><td>MCQ</td><td>107.64</td><td>6.37</td><td>12.3</td><td>0</td><td>43.79</td><td>34.58</td><td>10.6</td></tr>
           </tbody>
         </table>
-        <p><span class="dnerf">Table 1.</span> <b>Quantitive comparison of VLMs on SurgX-MMBench across six surgical tasks.</b></p>
+        <p><span class="dnerf">Table 1.</span> <b>Quantitive comparison of VLMs on SurgVLM-Bench across six surgical tasks.</b></p>
       </div>
     </div>
   </section>
@@ -947,7 +947,7 @@
           <div class="column is-full has-text-centered content">
               <h2 class="title is-3">Data Samples</h2>
               <p style="text-align: center; margin-bottom: 20px;">
-                We provide a selection of images in SurgX-MMD. If you're interested in exploring more, please refer to our complete dataset.
+                We provide a selection of images in SurgVLM-DB. If you're interested in exploring more, please refer to our complete dataset.
               </p>
               <div>
                   <label for="task-select">Select Task Type:</label>
