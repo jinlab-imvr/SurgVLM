@@ -1,7 +1,7 @@
 title: SurgVLM
-description: "SurgVLM: Large Vision-Language Model for Surgical Intelligence"
-baseurl: "/SurgVLM"
-url: "https://jinlab-imvr.github.io"
+description: Large Vision-Language Model for Surgical Intelligence
+url: https://jinlab-imvr.github.io/SurgVLM
+baseurl: /SurgVLM
 
 # Build settings
 markdown: kramdown
