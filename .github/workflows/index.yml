@@ -27,11 +27,10 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v3
+      - name: Upload Pages artifact            # ← 用专门的 upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: site-files
-          path: './public'
+          path: '.'                            # 指定你要部署的目录（或者 public、build 等）
 
       - name: Deploy to GitHub Pages
         id: deployment
