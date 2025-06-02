@@ -632,6 +632,7 @@
             <tr style="background-color: #d3d3d3;">
               <th style="text-align: center;"><strong>Rank</strong></th>
               <th style="text-align: left;"><strong>Model</strong></th>
+              <th style="text-align: center;"><strong>Institute</strong></th>
               <th style="text-align: center;"><strong>Evaluation</strong></th>
               <th style="text-align: center;"><strong>Arena Score ↑</strong></th>
               <th style="text-align: center;"><strong>Phase Acc</strong></th>
@@ -643,26 +644,26 @@
             </tr>
           </thead>
           <tbody>
-            <tr style="background-color: #b7e4c7;"><td>1</td><td style="text-align:left;">SurgVLM-72B Lora-tuning (MCQ)</td><td>MCQ</td><td>336.21</td><td>69.66</td><td>43.1</td><td>12.52</td><td>76.73</td><td>75.2</td><td>59.0</td></tr>
-            <tr style="background-color: #d0edd8;"><td>2</td><td style="text-align:left;">SurgVLM-72B Lora-tuning (Openset)</td><td>Openset</td><td>331.86</td><td>76.40</td><td>42.9</td><td>13.10</td><td>76.60</td><td>63.46</td><td>59.4</td></tr>
-            <tr><td>3</td><td style="text-align:left;">SurgVLM-32B Freeze-tuning (Openset)</td><td>Openset</td><td>306.91</td><td>71.20</td><td>40.1</td><td>12.98</td><td>74.51</td><td>59.72</td><td>48.4</td></tr>
-            <tr><td>4</td><td style="text-align:left;">SurgVLM-7B Full-tuning (Openset)</td><td>Openset</td><td>290.78</td><td>70.30</td><td>45.8</td><td>4.15</td><td>76.86</td><td>59.67</td><td>34.0</td></tr>
-            <tr><td>5</td><td style="text-align:left;">Gemini 2.0 Flash</td><td>MCQ</td><td>191.70</td><td>38.89</td><td>24.4</td><td>1.85</td><td>59.61</td><td>47.05</td><td>19.9</td></tr>
-            <tr><td>6</td><td style="text-align:left;">Qwen2.5-VL-72B-Instruct</td><td>MCQ</td><td>184.85</td><td>29.30</td><td>28.2</td><td>1.27</td><td>41.69</td><td>42.19</td><td>42.2</td></tr>
-            <tr><td>7</td><td style="text-align:left;">Qwen2.5-VL-32B-Instruct</td><td>MCQ</td><td>184.40</td><td>37.23</td><td>31.8</td><td>0.98</td><td>60.53</td><td>42.46</td><td>11.4</td></tr>
-            <tr><td>8</td><td style="text-align:left;">Qwen2.5-VL-7B-Instruct</td><td>MCQ</td><td>175.20</td><td>30.45</td><td>31.1</td><td>0.35</td><td>65.88</td><td>36.82</td><td>10.6</td></tr>
-            <tr><td>9</td><td style="text-align:left;">Qwen 2.5 Max</td><td>MCQ</td><td>174.37</td><td>34.79</td><td>28.3</td><td>0.35</td><td>34.77</td><td>36.16</td><td>40.0</td></tr>
-            <tr><td>10</td><td style="text-align:left;">InternVL3-78B</td><td>MCQ</td><td>172.97</td><td>27.32</td><td>29.5</td><td>0.52</td><td>50.20</td><td>36.33</td><td>29.1</td></tr>
-            <tr><td>11</td><td style="text-align:left;">Llama-4-Scout-17B-16E-Instruct</td><td>MCQ</td><td>163.84</td><td>35.77</td><td>25.1</td><td>0.58</td><td>37.39</td><td>37.00</td><td>28.0</td></tr>
-            <tr><td>12</td><td style="text-align:left;">Mistral-Small-3.1-24B-Instruct-2503</td><td>MCQ</td><td>156.98</td><td>22.61</td><td>12.5</td><td>0.46</td><td>68.10</td><td>36.41</td><td>16.9</td></tr>
-            <tr><td>13</td><td style="text-align:left;">InternVL3-8B</td><td>MCQ</td><td>146.42</td><td>23.88</td><td>29.3</td><td>2.08</td><td>48.24</td><td>34.72</td><td>8.2</td></tr>
-            <tr><td>14</td><td style="text-align:left;">MiniCPM-O-2_6</td><td>MCQ</td><td>140.34</td><td>17.75</td><td>30.8</td><td>0.06</td><td>35.95</td><td>35.48</td><td>20.3</td></tr>
-            <tr><td>15</td><td style="text-align:left;">Gemma3-27B-it</td><td>MCQ</td><td>138.93</td><td>14.08</td><td>33.2</td><td>0.06</td><td>38.04</td><td>35.95</td><td>17.6</td></tr>
-            <tr><td>16</td><td style="text-align:left;">Phi-4-Multimodal-Instruct</td><td>MCQ</td><td>131.10</td><td>22.45</td><td>15.1</td><td>0.12</td><td>58.43</td><td>34.20</td><td>0.8</td></tr>
-            <tr><td>17</td><td style="text-align:left;">MiniCPM-V-2_6</td><td>MCQ</td><td>128.77</td><td>15.20</td><td>24.3</td><td>0</td><td>38.69</td><td>33.28</td><td>17.3</td></tr>
-            <tr><td>18</td><td style="text-align:left;">GPT-4o</td><td>MCQ</td><td>118.71</td><td>36.43</td><td>28.1</td><td>1.50</td><td>6.67</td><td>38.31</td><td>7.7</td></tr>
-            <tr><td>19</td><td style="text-align:left;">LLava-1.5-7B</td><td>MCQ</td><td>112.57</td><td>23.46</td><td>5.1</td><td>0</td><td>25.49</td><td>31.42</td><td>27.1</td></tr>
-            <tr><td>20</td><td style="text-align:left;">Skywork-R1V-38B</td><td>MCQ</td><td>107.64</td><td>6.37</td><td>12.3</td><td>0</td><td>43.79</td><td>34.58</td><td>10.6</td></tr>
+            <tr style="background-color: #b7e4c7;"><td>1</td><td style="text-align:left;">SurgVLM-72B (Ours)</td><td>iMVR Lab</td><td>MCQ</td><td>336.21</td><td>69.66</td><td>43.1</td><td>12.52</td><td>76.73</td><td>75.2</td><td>59.0</td></tr>
+            <tr style="background-color: #d0edd8;"><td>2</td><td style="text-align:left;">SurgVLM-72B (Ours)</td><td>iMVR Lab</td><td>OV</td><td>331.86</td><td>76.40</td><td>42.9</td><td>13.10</td><td>76.60</td><td>63.46</td><td>59.4</td></tr>
+            <tr><td>3</td><td style="text-align:left;">SurgVLM-32B (Ours)</td><td>iMVR Lab</td><td>OV</td><td>306.91</td><td>71.20</td><td>40.1</td><td>12.98</td><td>74.51</td><td>59.72</td><td>48.4</td></tr>
+            <tr><td>4</td><td style="text-align:left;">SurgVLM-7B (Ours)</td><td>iMVR Lab</td><td>OV</td><td>290.78</td><td>70.30</td><td>45.8</td><td>4.15</td><td>76.86</td><td>59.67</td><td>34.0</td></tr>
+            <tr><td>5</td><td style="text-align:left;">Gemini 2.0 Flash</td><td>Google DeepMind</td><td>MCQ</td><td>191.70</td><td>38.89</td><td>24.4</td><td>1.85</td><td>59.61</td><td>47.05</td><td>19.9</td></tr>
+            <tr><td>6</td><td style="text-align:left;">Qwen2.5-VL-72B-Instruct</td><td>Alibaba Cloud</td><td>MCQ</td><td>184.85</td><td>29.30</td><td>28.2</td><td>1.27</td><td>41.69</td><td>42.19</td><td>42.2</td></tr>
+            <tr><td>7</td><td style="text-align:left;">Qwen2.5-VL-32B-Instruct</td><td>Alibaba Cloud</td><td>MCQ</td><td>184.40</td><td>37.23</td><td>31.8</td><td>0.98</td><td>60.53</td><td>42.46</td><td>11.4</td></tr>
+            <tr><td>8</td><td style="text-align:left;">Qwen2.5-VL-7B-Instruct</td><td>Alibaba Cloud</td><td>MCQ</td><td>175.20</td><td>30.45</td><td>31.1</td><td>0.35</td><td>65.88</td><td>36.82</td><td>10.6</td></tr>
+            <tr><td>9</td><td style="text-align:left;">Qwen 2.5 Max</td><td>Alibaba Cloud</td><td>MCQ</td><td>174.37</td><td>34.79</td><td>28.3</td><td>0.35</td><td>34.77</td><td>36.16</td><td>40.0</td></tr>
+            <tr><td>10</td><td style="text-align:left;">InternVL3-78B</td><td>Shanghai AI Lab</td><td>MCQ</td><td>172.97</td><td>27.32</td><td>29.5</td><td>0.52</td><td>50.20</td><td>36.33</td><td>29.1</td></tr>
+            <tr><td>11</td><td style="text-align:left;">Llama-4-Scout-17B-16E-Instruct</td><td>Meta AI</td><td>MCQ</td><td>163.84</td><td>35.77</td><td>25.1</td><td>0.58</td><td>37.39</td><td>37.00</td><td>28.0</td></tr>
+            <tr><td>12</td><td style="text-align:left;">Mistral-Small-3.1-24B-Instruct-2503</td><td>Mistral AI</td><td>MCQ</td><td>156.98</td><td>22.61</td><td>12.5</td><td>0.46</td><td>68.10</td><td>36.41</td><td>16.9</td></tr>
+            <tr><td>13</td><td style="text-align:left;">InternVL3-8B</td><td>Shanghai AI Lab</td><td>MCQ</td><td>146.42</td><td>23.88</td><td>29.3</td><td>2.08</td><td>48.24</td><td>34.72</td><td>8.2</td></tr>
+            <tr><td>14</td><td style="text-align:left;">MiniCPM-O-2_6</td><td>ModelBest</td><td>MCQ</td><td>140.34</td><td>17.75</td><td>30.8</td><td>0.06</td><td>35.95</td><td>35.48</td><td>20.3</td></tr>
+            <tr><td>15</td><td style="text-align:left;">Gemma3-27B-it</td><td>Google DeepMind</td><td>MCQ</td><td>138.93</td><td>14.08</td><td>33.2</td><td>0.06</td><td>38.04</td><td>35.95</td><td>17.6</td></tr>
+            <tr><td>16</td><td style="text-align:left;">Phi-4-Multimodal-Instruct</td><td>Microsoft</td><td>MCQ</td><td>131.10</td><td>22.45</td><td>15.1</td><td>0.12</td><td>58.43</td><td>34.20</td><td>0.8</td></tr>
+            <tr><td>17</td><td style="text-align:left;">MiniCPM-V-2_6</td><td>MiniCPM Team</td><td>MCQ</td><td>128.77</td><td>15.20</td><td>24.3</td><td>0</td><td>38.69</td><td>33.28</td><td>17.3</td></tr>
+            <tr><td>18</td><td style="text-align:left;">GPT-4o</td><td>OpenAI</td><td>MCQ</td><td>118.71</td><td>36.43</td><td>28.1</td><td>1.50</td><td>6.67</td><td>38.31</td><td>7.7</td></tr>
+            <tr><td>19</td><td style="text-align:left;">LLava-1.5-7B</td><td>WAIV Lab</td><td>MCQ</td><td>112.57</td><td>23.46</td><td>5.1</td><td>0</td><td>25.49</td><td>31.42</td><td>27.1</td></tr>
+            <tr><td>20</td><td style="text-align:left;">Skywork-R1V-38B</td><td>Skywork AI</td><td>MCQ</td><td>107.64</td><td>6.37</td><td>12.3</td><td>0</td><td>43.79</td><td>34.58</td><td>10.6</td></tr>
           </tbody>
         </table>
         <p><span class="dnerf">Table 1.</span> <b>Quantitive comparison of VLMs on SurgVLM-Bench across six surgical tasks.</b></p>
