@@ -1,4 +1,4 @@
-# SurgVLM: Large Vision-Language Model for Surgical Intelligence
+# SurgVLM: A Large Vision-Language Model and Systematic Evaluation Benchmark for Surgical Intelligence
 
 This repository contains the official website for SurgVLM, a large vision-language model for surgical intelligence.
 
@@ -18,9 +18,10 @@ If you find this work useful for your research, please consider citing:
 
 ```bibtex
 @misc{surgvlm,
-    title={SurgVLM: Large Vision-Language Model for Surgical Intelligence},
-    author={Zhitao Zeng and Zhu Zhuo and Xiaojun Jia and Erli Zhang and Junde Wu and Jiaan Zhang and Yuxuan Wang and Chang Han Low and Jian Jiang and Zilong Zheng and Xiaochun Cao and Yutong Ban and Qi Dou and Yang Liu and Yueming Jin},
-    year={2024}
+    title={SurgVLM: A Large Vision-Language Model and Systematic Evaluation Benchmark for Surgical Intelligence},
+    author={Zhitao Zeng, Yueming Jin},
+    publisher={CVPR},
+    year={2025}
 }
 ```
 
