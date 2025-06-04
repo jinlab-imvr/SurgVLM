@@ -6,6 +6,10 @@
 [![Project Page](https://img.shields.io/badge/Project-Page-green.svg)](https://jinlab-imvr.github.io/SurgVLM/)
 [![GitHub](https://img.shields.io/github/stars/jinlab-imvr/SurgVLM?style=social)](https://github.com/jinlab-imvr/SurgVLM)
 
+**[🌐 Project Page](https://jinlab-imvr.github.io/SurgVLM/) | [📄 Paper](https://www.arxiv.org/abs/2506.02555) | [🤗 Models](https://github.com/jinlab-imvr/SurgVLM) | [📊 Leaderboard](https://jinlab-imvr.github.io/SurgVLM/)**
+
+*Building the future of surgical intelligence with AI* 🏥🤖
+
 </div>
 
 ## 📖 Overview
@@ -187,13 +191,3 @@ We gratefully acknowledge the support from all institutions and contributors. Sp
 ## 📜 License
 
 This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
-
----
-
-<div align="center">
-
-**[🌐 Project Page](https://jinlab-imvr.github.io/SurgVLM/) | [📄 Paper](https://www.arxiv.org/abs/2506.02555) | [🤗 Models](https://github.com/jinlab-imvr/SurgVLM) | [📊 Leaderboard](https://jinlab-imvr.github.io/SurgVLM/)**
-
-*Building the future of surgical intelligence with AI* 🏥🤖
-
-</div>
