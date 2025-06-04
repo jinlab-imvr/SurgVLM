@@ -3,8 +3,8 @@
 <div align="center">
 
 [![arXiv](https://img.shields.io/badge/arXiv-2506.02555-b31b1b.svg)](https://www.arxiv.org/abs/2506.02555)
-[![Project Page](https://img.shields.io/badge/Project-Page-green.svg)](https://jinlab-imvr.github.io/AI-in-Surgery.github.io/)
-[![GitHub](https://img.shields.io/github/stars/jinlab-imvr/SurgVLM-Code?style=social)](https://github.com/jinlab-imvr/SurgVLM-Code)
+[![Project Page](https://img.shields.io/badge/Project-Page-green.svg)](https://jinlab-imvr.github.io/SurgVLM/)
+[![GitHub](https://img.shields.io/github/stars/jinlab-imvr/SurgVLM?style=social)](https://github.com/jinlab-imvr/SurgVLM)
 
 </div>
 
@@ -37,7 +37,7 @@ Foundation models have achieved transformative success across biomedical domains
   - Multi-task VQA
 
 ### 🤖 SurgVLM Models: State-of-the-Art Performance
-- **SurgVLM-7B**: Built on Qwen2.5-7B with SIGLIP2 vision encoder
+- **SurgVLM-7B**: Built on Qwen2.5-7B with DFN CLIP vision encoder
 - **SurgVLM-32B**: Built on Qwen2.5-32B with DFN CLIP vision encoder  
 - **SurgVLM-72B**: Built on Qwen2.5-72B with DFN CLIP vision encoder
 
@@ -61,13 +61,13 @@ Our SurgVLM-72B achieves **75.4% improvement** on overall arena score compared w
 | 4  | SurgVLM-7B (Ours) | **290.78** | **70.30** | **45.8** | **4.15** | **76.86** | **59.67** | **34.0** |
 | 5  | Gemini 2.0 Flash | 191.70 | 38.89 | 24.4 | 1.85 | 59.61 | 47.05 | 19.9 |
 
-*Complete leaderboard with 20 models available on our [project page](https://jinlab-imvr.github.io/AI-in-Surgery.github.io/)*
+*Complete leaderboard with 20 models available on our [project page](https://jinlab-imvr.github.io/SurgVLM/)*
 
 ## 📦 Model Downloads
 
 | Model | Size | HuggingFace | Description |
 |-------|------|-------------|-------------|
-| SurgVLM-7B | 7B | 🤗 [Coming Soon] | Full-tuning variant with SIGLIP2 |
+| SurgVLM-7B | 7B | 🤗 [Coming Soon] | Full-tuning variant with DFN CLIP |
 | SurgVLM-32B | 32B | 🤗 [Coming Soon] | Freeze-tuning variant with DFN CLIP |
 | SurgVLM-72B | 72B | 🤗 [Coming Soon] | LoRA-tuning variant with DFN CLIP |
 
@@ -82,8 +82,8 @@ Our SurgVLM-72B achieves **75.4% improvement** on overall arena score compared w
 
 ```bash
 # Clone the repository
-git clone https://github.com/jinlab-imvr/SurgVLM-Code.git
-cd SurgVLM-Code
+git clone https://github.com/jinlab-imvr/SurgVLM.git
+cd SurgVLM
 
 # Install dependencies
 pip install -r requirements.txt
@@ -192,7 +192,7 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 <div align="center">
 
-**[🌐 Project Page](https://jinlab-imvr.github.io/AI-in-Surgery.github.io/) | [📄 Paper](https://www.arxiv.org/abs/2506.02555) | [🤗 Models](https://github.com/jinlab-imvr/SurgVLM-Code) | [📊 Leaderboard](https://jinlab-imvr.github.io/AI-in-Surgery.github.io/)**
+**[🌐 Project Page](https://jinlab-imvr.github.io/SurgVLM/) | [📄 Paper](https://www.arxiv.org/abs/2506.02555) | [🤗 Models](https://github.com/jinlab-imvr/SurgVLM) | [📊 Leaderboard](https://jinlab-imvr.github.io/SurgVLM/)**
 
 *Building the future of surgical intelligence with AI* 🏥🤖
 
