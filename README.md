@@ -57,15 +57,32 @@ Our SurgVLM-72B achieves **75.4% improvement** on overall arena score compared w
 
 ## 🏆 Leaderboard
 
-| Rank | Model | Arena Score ↑ | Phase Acc | Action Acc | Triplet Acc | CVS Acc | VQA Acc | Loc mIoU |
-|------|-------|---------------|-----------|------------|-------------|---------|---------|----------|
-| 🥇 1  | SurgVLM-72B (Ours) | **336.21** | **69.66** | **43.1** | **12.52** | **76.73** | **75.2** | **59.0** |
-| 🥈 2  | SurgVLM-72B (Ours) | **331.86** | **76.40** | **42.9** | **13.10** | **76.60** | **63.46** | **59.4** |
-| 🥉 3  | SurgVLM-32B (Ours) | **306.91** | **71.20** | **40.1** | **12.98** | **74.51** | **59.72** | **48.4** |
-| 4  | SurgVLM-7B (Ours) | **290.78** | **70.30** | **45.8** | **4.15** | **76.86** | **59.67** | **34.0** |
-| 5  | Gemini 2.0 Flash | 191.70 | 38.89 | 24.4 | 1.85 | 59.61 | 47.05 | 19.9 |
+| Rank | Model | Institute | Evaluation | Arena Score ↑ | Phase Acc | Action Acc | Triplet Acc | CVS Acc | VQA Acc | Loc mIoU |
+|------|-------|-----------|------------|---------------|-----------|------------|-------------|---------|---------|----------|
+| 🥇 1  | SurgVLM-72B (Ours) | iMVR Lab | MCQ | **336.21** | **69.66** | **43.1** | **12.52** | **76.73** | **75.2** | **59.0** |
+| 🥈 2  | SurgVLM-72B (Ours) | iMVR Lab | OV | **331.86** | **76.40** | **42.9** | **13.10** | **76.60** | **63.46** | **59.4** |
+| 🥉 3  | SurgVLM-32B (Ours) | iMVR Lab | OV | **306.91** | **71.20** | **40.1** | **12.98** | **74.51** | **59.72** | **48.4** |
+| 4  | SurgVLM-7B (Ours) | iMVR Lab | OV | **290.78** | **70.30** | **45.8** | **4.15** | **76.86** | **59.67** | **34.0** |
+| 5  | Gemini 2.0 Flash | Google DeepMind | MCQ | 191.70 | 38.89 | 24.4 | 1.85 | 59.61 | 47.05 | 19.9 |
+| 6  | Qwen2.5-VL-72B-Instruct | Alibaba Cloud | MCQ | 184.85 | 29.30 | 28.2 | 1.27 | 41.69 | 42.19 | 42.2 |
+| 7  | Qwen2.5-VL-32B-Instruct | Alibaba Cloud | MCQ | 184.40 | 37.23 | 31.8 | 0.98 | 60.53 | 42.46 | 11.4 |
+| 8  | Qwen2.5-VL-7B-Instruct | Alibaba Cloud | MCQ | 175.20 | 30.45 | 31.1 | 0.35 | 65.88 | 36.82 | 10.6 |
+| 9  | Qwen 2.5 Max | Alibaba Cloud | MCQ | 174.37 | 34.79 | 28.3 | 0.35 | 34.77 | 36.16 | 40.0 |
+| 10 | InternVL3-78B | Shanghai AI Lab | MCQ | 172.97 | 27.32 | 29.5 | 0.52 | 50.20 | 36.33 | 29.1 |
+| 11 | Llama-4-Scout-17B-16E-Instruct | Meta AI | MCQ | 163.84 | 35.77 | 25.1 | 0.58 | 37.39 | 37.00 | 28.0 |
+| 12 | Mistral-Small-3.1-24B-Instruct-2503 | Mistral AI | MCQ | 156.98 | 22.61 | 12.5 | 0.46 | 68.10 | 36.41 | 16.9 |
+| 13 | InternVL3-8B | Shanghai AI Lab | MCQ | 146.42 | 23.88 | 29.3 | 2.08 | 48.24 | 34.72 | 8.2 |
+| 14 | MiniCPM-O-2_6 | ModelBest | MCQ | 140.34 | 17.75 | 30.8 | 0.06 | 35.95 | 35.48 | 20.3 |
+| 15 | Gemma3-27B-it | Google DeepMind | MCQ | 138.93 | 14.08 | 33.2 | 0.06 | 38.04 | 35.95 | 17.6 |
+| 16 | Phi-4-Multimodal-Instruct | Microsoft | MCQ | 131.10 | 22.45 | 15.1 | 0.12 | 58.43 | 34.20 | 0.8 |
+| 17 | MiniCPM-V-2_6 | MiniCPM Team | MCQ | 128.77 | 15.20 | 24.3 | 0 | 38.69 | 33.28 | 17.3 |
+| 18 | GPT-4o | OpenAI | MCQ | 118.71 | 36.43 | 28.1 | 1.50 | 6.67 | 38.31 | 7.7 |
+| 19 | LLava-1.5-7B | WAIV Lab | MCQ | 112.57 | 23.46 | 5.1 | 0 | 25.49 | 31.42 | 27.1 |
+| 20 | Skywork-R1V-38B | Skywork AI | MCQ | 107.64 | 6.37 | 12.3 | 0 | 43.79 | 34.58 | 10.6 |
 
-*Complete leaderboard with 20 models available on our [project page](https://jinlab-imvr.github.io/SurgVLM/)*
+**Note**: The leaderboard is ranked by the **Arena Score** obtained by summing the most important metrics across six surgical tasks. Higher scores indicate better performance. MCQ = Multiple Choice Questions, OV = Open Vocabulary.
+
+*Submit your results to: zhitao@nus.edu.sg*
 
 ## 📦 Model Downloads
 
