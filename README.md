@@ -199,7 +199,7 @@ If you find SurgVLM useful for your research, please cite our paper:
 
 For questions about SurgVLM, please contact:
 - **Zhitao Zeng**: zhitao@nus.edu.sg
-- **Yueming Jin**: yueming.jin@nus.edu.sg
+- **Yueming Jin**: ymjin@nus.edu.sg
 
 ## 🙏 Acknowledgments
 
