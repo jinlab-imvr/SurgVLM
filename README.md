@@ -1,5 +1,3 @@
-# SurgVLM
-
 <div align="center">
 
 <h3>A Unified Vision-Language Foundation Model for Surgical Intelligence</h3>
