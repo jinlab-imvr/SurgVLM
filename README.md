@@ -3,10 +3,6 @@
 <h3>A Unified Vision-Language Foundation Model for Surgical Intelligence</h3>
 
 <p>
-  Perception, temporal understanding, and reasoning for surgical scene analysis.
-</p>
-
-<p>
   <a href="https://www.arxiv.org/abs/2506.02555">
     <img src="https://img.shields.io/badge/📄%20Paper-arXiv-b31b1b?style=for-the-badge" alt="Paper">
   </a>
