@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<h3>A Unified Vision-Language Framework for Surgical Intelligence</h3>
+<h3>A Unified Vision-Language Foundation Model for Surgical Intelligence</h3>
 
 <p>
   Perception, temporal understanding, and reasoning for surgical scene analysis.
@@ -31,13 +31,13 @@
 
 Surgical intelligence requires more than general visual understanding. It involves perception of surgical scenes, temporal understanding of procedural progress, and reasoning over instruments, anatomy, actions, and safety.
 
-**SurgVLM** is a unified vision-language framework designed for surgical intelligence. It supports diverse surgical tasks within a single modeling pipeline, spanning visual perception, temporal analysis, and high-level reasoning.
+**SurgVLM** is a unified vision-language model designed for surgical intelligence. It supports diverse surgical tasks within a single modeling pipeline, spanning visual perception, temporal analysis, and high-level reasoning.
 
 Our project includes:
 
 - **SurgVLM-DB**: a surgical multimodal corpus for training surgical vision-language models
 - **SurgVLM Models**: two specialized variants for instruction following and reasoning
-- **Unified Surgical Intelligence**: one framework for diverse surgical understanding tasks
+- **Unified Surgical Intelligence**: one model for diverse surgical understanding tasks
 
 ---
 
@@ -95,7 +95,7 @@ SurgVLM is designed to support a broad range of surgical intelligence tasks, inc
 - **Instrument localization**
 - **Critical view of safety assessment**
 
-These capabilities make SurgVLM a unified framework for surgical scene understanding and reasoning.
+These capabilities make SurgVLM a unified vision-language model for surgical scene understanding and reasoning.
 
 ---
 
@@ -113,12 +113,3 @@ These capabilities make SurgVLM a unified framework for surgical scene understan
 | Resource | Download | Status | Description |
 |----------|----------|--------|-------------|
 | SurgVLM-DB | [Hugging Face](https://huggingface.co/datasets/SurgSigma/SurgSigma-DB) | Partially released | Surgical multimodal corpus for model training |
-
----
-
-## Installation
-
-```bash
-git clone https://github.com/jinlab-imvr/SurgVLM.git
-cd SurgVLM
-pip install -r requirements.txt
