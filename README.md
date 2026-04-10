@@ -23,13 +23,6 @@
   </a>
 </p>
 
-<p>
-  <a href="https://www.arxiv.org/abs/2506.02555"><b>Paper</b></a> •
-  <a href="https://jinlab-imvr.github.io/SurgVLM/"><b>Project Page</b></a> •
-  <a href="https://huggingface.co/datasets/SurgSigma/SurgSigma-DB"><b>Dataset</b></a> •
-  <a href="https://github.com/jinlab-imvr/SurgVLM"><b>Code</b></a>
-</p>
-
 </div>
 
 ---
