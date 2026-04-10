@@ -31,7 +31,7 @@ Our project includes:
 
 - **SurgVLM-DB**: a surgical multimodal corpus for training surgical vision-language models
 - **SurgVLM Models**: two specialized variants for instruction following and reasoning
-- **Unified Surgical Intelligence**: one model for diverse surgical understanding tasks
+- **SurgVLM-Bench**: A Comprehensive Surgical Benchmarks for VLMs
 
 ---
 
@@ -75,21 +75,6 @@ SurgVLM provides two specialized model variants, both built on **Qwen3.5-9B**, t
 |-------|----------|-------------|
 | **SurgVLM-9B-Instruct** | Qwen3.5-9B | An instruction-tuned model for general surgical vision-language understanding |
 | **SurgVLM-9B-Reasoning** | Qwen3.5-9B | A reasoning-oriented model for more complex surgical analysis and decision-related tasks |
-
----
-
-## Capabilities
-
-SurgVLM is designed to support a broad range of surgical intelligence tasks, including:
-
-- **Phase recognition**
-- **Step recognition**
-- **Action recognition**
-- **Triplet understanding**
-- **Instrument localization**
-- **Critical view of safety assessment**
-
-These capabilities make SurgVLM a unified vision-language model for surgical scene understanding and reasoning.
 
 ---
 
