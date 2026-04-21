@@ -74,18 +74,9 @@ SurgVLM provides two specialized model variants, both built on **Qwen3.5-9B**, t
 | Model | Backbone | Description |
 |-------|----------|-------------|
 | **SurgVLM-9B-Instruct** | Qwen3.5-9B | An instruction-tuned model for general surgical vision-language understanding |
-| **SurgVLM-9B-Reasoning** | Qwen3.5-9B | A reasoning-oriented model for more complex surgical analysis and decision-related tasks |
+| **SurgVLM-9B-Reasoning** | Qwen3.5-9B | A reasoning-oriented model for more complex surgical analysis |
 
 ---
-
-## Downloads
-
-### Models
-
-| Model | Backbone | Download | Status |
-|-------|----------|----------|--------|
-| SurgVLM-9B-Instruct | Qwen3.5-9B | Coming Soon | To be released |
-| SurgVLM-9B-Reasoning | Qwen3.5-9B | Coming Soon | To be released |
 
 ### Data
 
